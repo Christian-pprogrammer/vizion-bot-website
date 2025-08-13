@@ -319,6 +319,74 @@ https://templatemo.com/tm-535-softy-pinko
                 </div>
             </div>
 
+            <div class="news-media-container mb-4">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- CBS News -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/ocbs.png" alt="CBS News" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Bloomberg -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/5news.png" alt="Bloomberg" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- BuzzFeed -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/5news.png" alt="BuzzFeed" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- CNN -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/abc7.png" alt="CNN" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- Forbes -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/fox.png" alt="Forbes" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- NowThis -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/bloomberg.png" alt="NowThis" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- The Times -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/buzzfeed.png" alt="The Times" class="news-logo">
+                            </div>
+                        </div>
+                        
+                        <!-- Mashable -->
+                        <div class="swiper-slide">
+                            <div class="news-slide">
+                                <img src="https://wewalk.io/wp-content/uploads/2023/09/cnn.png" alt="Mashable" class="news-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="news-nav-btn news-nav-prev" id="newsPrevBtn">‹</button>
+                <button class="news-nav-btn news-nav-next" id="newsNextBtn">›</button>
+            </div>
+    
+
             <!-- Swiper Container -->
             <div class="media-swiper-container">
                 <div class="mediaSwiper">
@@ -1132,11 +1200,11 @@ https://templatemo.com/tm-535-softy-pinko
             spaceBetween: 30,
             loop: true,
             grabCursor: true, // Shows grab cursor on hover
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            //     pauseOnMouseEnter: true,
-            // },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
             navigation: {
                 nextEl: ".media-swiper-button-next",
                 prevEl: ".media-swiper-button-prev",
@@ -1218,6 +1286,61 @@ https://templatemo.com/tm-535-softy-pinko
             }
         });
     }
+
+    var newsSwiper = new Swiper(".news-swiper", {
+            slidesPerView: 6,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            navigation: {
+                nextEl: "#newsNextBtn",
+                prevEl: "#newsPrevBtn",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                },
+            },
+            // Smooth drag settings
+            touchRatio: 1,
+            touchAngle: 45,
+            simulateTouch: true,
+            allowTouchMove: true,
+            resistance: true,
+            resistanceRatio: 0.85,
+        });
+
+        // Optional: Add click event to logos
+        document.querySelectorAll('.news-logo').forEach(logo => {
+            logo.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Clicked:', this.alt);
+                // Add your click logic here
+            });
+        });
 
     </script>
 
