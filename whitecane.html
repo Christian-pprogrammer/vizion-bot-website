@@ -283,6 +283,7 @@
     </style>
 </head>
 <body>
+      <div id="navbar"></div>
     <!-- Hero Section -->
     <div class="about-hero">
         <div class="about-overlay"></div>
@@ -340,5 +341,23 @@
 </div>
 
     </section>
+
+          <div id="footer"></div>
+
+       <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      })
+      .catch(err => console.error("Navbar load failed:", err));
+
+          fetch("footer.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("footer").innerHTML = html;
+      })
+      .catch(err => console.error("Footer load failed:", err));
+  </script>
 </body>
 </html>
