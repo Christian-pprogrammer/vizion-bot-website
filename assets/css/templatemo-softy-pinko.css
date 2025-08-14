@@ -496,9 +496,14 @@ header
 }
 
 .header-area .main-nav .nav li {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
+.header-area .main-nav .nav li:first-child {
+  padding-left: 30px;
+}
+
 .header-area .main-nav .nav li:last-child {
   margin-left: auto;
 }
