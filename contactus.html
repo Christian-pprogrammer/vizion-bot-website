@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutus</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .about-hero {
+            position: relative;
+            height: 85vh;
+            background-image: url('./assets/images/partner.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 970px;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .justifycontent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .about-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            color: #f8f9fa;
+        }
+        
+        .partner-btn {
+            background: linear-gradient(45deg, #0079A5, #3EC6EC);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        
+        .partner-btn:hover {
+            background: linear-gradient(45deg, #3EC6EC, #0079A5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            padding: 80px 0;
+            background: white;
+            padding-top: 40px;
+        }
+
+        .info-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+        }
+
+        .sidebar {
+            background: #f1f5f9;
+            min-width: 300px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .sidebar-item {
+            padding: 20px 30px;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            color: #64748b;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .sidebar-item:hover {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .sidebar-item.active {
+            background: #1e293b;
+            color: white;
+            font-weight: 600;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 50px;
+            padding-top: 0px;
+            text-align: center;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-description {
+                font-size: 1.1rem;
+            }
+            
+            .about-hero {
+                background-attachment: scroll;
+            }
+
+            .info-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                min-width: auto;
+                display: flex;
+                overflow-x: auto;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .sidebar-item {
+                white-space: nowrap;
+                min-width: 150px;
+                text-align: center;
+                border-bottom: none;
+                border-right: 1px solid #e2e8f0;
+            }
+
+            .sidebar-item:last-child {
+                border-right: none;
+            }
+
+            .content-area {
+                padding: 30px;
+            }
+
+            .content-section h2 {
+                font-size: 28px;
+            }
+        }
+        .justifycontent2{
+            max-width: 970px;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .map-container{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="about-overlay"></div>
+        <div class="container justifycontent">
+            <div class="about-content">
+                <h1 class="about-title">Have questions about Vizionbot?</h1>
+                <p class="about-description">
+                   Please contact us by sending an email to: <a href="mailto:vizionbot@gmail.com">vizionbot@gmail.com</a>. We aim to respond to you within 24 hours. Thank you!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Information Section -->
+      <section class="company-info-section container justifycontent2">
+                  <div class="map-container">
+                      <iframe width="400px" height="400px" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1915.8832890291208!2d30.159927499507326!3d-1.9408532851549025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d-1.9410961!2d30.1612773!4m3!3m2!1d-1.9409292999999999!2d30.161224999999998!5e1!3m2!1sen!2srw!4v1754321257216!5m2!1sen!2srw" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+        <div id="profile" class="content-section active">
+                        <h2>Our Office</h2>
+<p>Kigali city - Rwanda - Gasabo, IIL (Industrial innovation lab)</p>
+                    </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutus</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .about-hero {
+            position: relative;
+            height: 80vh;
+            background-image: url('./assets/images/w_stick.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+        }
+        
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 0 10px;
+        }
+        
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            color: #f8f9fa;
+        }
+        
+        .partner-btn {
+            background: transparent;
+            color: white;
+            padding: 13px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid #0079A5;
+        }
+        
+        .partner-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+            background: rgba(33, 31, 31, 0.291);
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background: white;
+        }
+
+        /* Product Styling */
+        .product-item {
+            display: flex;
+            /* align-items: center; */
+            gap: 30px;
+            /* min-height: 100vh; */
+        }
+
+        .product-item {
+            flex-direction: row-reverse;
+            margin-bottom: 80px;
+        }
+
+         .product-item:nth-child(3) {
+            min-height: 45vh;
+        }
+
+        .product-image {
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 340px;
+            object-fit: contain;
+            border-radius: 0px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* border: 1px solid  #3EC6EC; */
+        }
+
+        .product-content {
+            flex: 1;
+            max-width: 55%;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+
+        .product-content h2 {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .product-content p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Price styling */
+        .product-price {
+            color: #0079A5;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Product buttons */
+        .product-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .product-btn {
+            background:  #3EC6EC;
+            color: white;
+            padding: 10px 40px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-btn:hover {
+            background: #005f82;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .product-btn.secondary {
+            background: transparent;
+            color: #0079A5;
+            border: 2px solid #0079A5;
+        }
+
+        .product-btn.secondary:hover {
+            background: #0079A5;
+            color: white;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            margin-bottom: 60px;
+            /* margin-top: 70px; */
+            /* padding-top: 40px; */
+        }
+
+   .benefits-section1 {
+    border-top: 1px solid #e2e8f0;
+}
+
+        .benefits-title {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .benefit-indicator {
+            width: 15px;
+            height: 15px;
+            background-color: #3EC6EC;
+            border-radius: 100px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .benefit-indicator-sm{
+              width: 10px;
+            height: 10px;
+        }
+
+         .list-indicator {
+            width: 15px;
+            height: 15px;
+            background-color: #3EC6EC;
+            border-radius: 0px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .benefit-text {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-description {
+                font-size: 1.1rem;
+            }
+            
+            .about-hero {
+                background-attachment: scroll;
+            }
+
+            .product-item {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .product-image,
+            .product-content {
+                max-width: 100%;
+            }
+
+            .product-content h2 {
+                font-size: 28px;
+            }
+
+            .company-info-section {
+                padding: 40px 20px;
+            }
+
+            .product-buttons {
+                justify-content: center;
+            }
+        }
+
+        .word{
+              color: #64748b;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        #digital-walking-stick, #digital-walking-stick-ai{
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="about-overlay"></div>
+        <div class="container">
+            <div class="about-content">
+                <h1 class="about-title">
+                 Electro-Mechanical mobility aids
+                </h1>
+                  <p class="about-description">
+                We provide walking solutions for people with visual impairments, including digital walking sticks, AI-enabled canes, and accessories like white canes.
+                </p>
+              <div class="">
+                  <a href="#" class="partner-btn">Buy now</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="company-info-section container">
+
+        <!-- Product 1: Digital Walking Stick -->
+         <div id="digital-walking-stick">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./assets/images/stick_.jpeg" alt="Digital Walking Stick">
+            </div>
+            <div class="product-content">
+                <h2>1. DIGITAL WALKING STICK</h2>
+                <p>
+                    The digital walking stick is an innovative assistive device designed for visually impaired people. It helps users navigate safely by scanning their surroundings and detecting obstacles in real time. Additionally, it serves as a signal to others, making it easier to recognize visually impaired people and provide them with appropriate assistance.
+                </p>
+                <div class="product-price">RWF 70,000</div>
+                <div class="product-buttons">
+                    <a href="#" class="product-btn">Buy</a>
+                    <a href="#" class="product-btn secondary">Features</a>
+                    <a href="#" class="product-btn secondary">How to use</a>
+                </div>
+            </div>
+        </div>
+
+          <!--features of digital walking stick -->
+        <div class="benefits-section">
+            <h2 class="benefits-title">
+                KEY FEATURES OF THE DIGITAL WALKING STICK
+            </h2>
+
+            <p class="word">
+                Vizion Bot develops a digital walking stick for visually impaired people, featuring auto-sensing, vibration alerts, adjustable tubes, and a solar-powered battery. Their goal is to improve accessibility, safety, and quality of life for people with visual impairments.
+Key features include:
+            </p>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Obstacle Detection:</b> Uses ultrasonic sensors to detect nearby obstacles and alert the user through vibration signals.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠⁠Vibration Alerts :</b> Different vibration patterns indicate the distance to obstacles, helping users adjust their path.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Lightweight & Foldable Design :</b> Easy to carry, store, and unfold when needed.</p>
+            </div>
+
+            <div>
+                 <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Ergonomic Grip:</b> Comfortable, non-slip handle for long periods of use.</p>
+            </div>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Rechargeable Battery:</b> Long-lasting battery life, easily recharged via USB.</p>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Durable & Weather-Resistant:</b> Designed for daily use in different weather conditions.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Adjustable Length:</b> Telescopic shaft to suit users of different heights.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Built-in LED Light:</b> Illuminates the path in low-light environments.</p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Audible Alerts:</b> Optional sound notification in addition to vibrations for obstacle warning.</p>
+            </div>
+        </div>
+
+              <!-- How to use digital walking stick -->
+        <div class="benefits-section">
+            <h2 class="benefits-title">
+                GUIDELINES FOR USING THE DIGITAL WALKING STICK
+            </h2>
+
+            <p class="word">Visually impaired individuals should follow these rules when using the digital walking stick:</p>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Wear the elastic strap located at the top of the stick.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Turn on the stick by pressing the button on the left-side switch.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Hold the stick in front of your foot while walking.</p>
+            </div>
+
+            <div>
+                 <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">The stick will start to vibrate to indicate obstacles:</p>
+            </div>
+                       <div style="padding-left: 30px;">
+                         <div class="benefit-item">
+                <div class="benefit-indicator benefit-indicator-sm"></div>
+                <p class="benefit-text"><b>Low vibration:</b> Detected at approximately 1 meter from obstacles.</p>
+                </div>
+                 <div class="benefit-item">
+                <div class="benefit-indicator benefit-indicator-sm"></div>
+                <p class="benefit-text"><b>High vibration with sound:</b> Detected at 80–0 cm from obstacles.</p>
+                </div>
+                       </div>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">Fold the stick when entering cars or other transport to protect it.</p>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">Turn off the stick when you reach your destination to save power.</p>
+            </div>
+        </div>
+
+        </div>
+
+
+        <!-- Product 2: Digital Walking Stick with AI -->
+         <div id="digital-walking-stick-ai">
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./assets/images/stick_ai.jpeg" alt="Digital Walking Stick with AI">
+            </div>
+            <div class="product-content">
+                <h2>2. DIGITAL WALKING STICK WITH AI</h2>
+                <p>
+                   The Artificial Intelligent Digital Walking Stick by Vizion Bot is a cutting-edge assistive device designed to enhance the independence and safety of visually impaired people. Equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.
+                </p>
+                <div class="product-price">RWF 120,000</div>
+                <div class="product-buttons">
+                    <a href="#" class="product-btn">Buy</a>
+                    <a href="#" class="product-btn secondary">Features</a>
+                    <a href="#" class="product-btn secondary">How to use</a>
+                </div>
+            </div>
+        </div>
+
+
+                  <!--features of digital walking stick with ai -->
+        <div class="benefits-section">
+            <h2 class="benefits-title">
+                KEY FEATURES OF THE AI DIGITAL WALKING STICK
+            </h2>
+
+            <p class="word">
+             Vizion Bot develops an Artificial Intelligent Digital Walking Stick for visually impaired people, designed to enhance independence, safety, and quality of life. Equipped with advanced AI sensors, it scans surroundings to detect obstacles, height changes, and potential hazards, alerting users through vibrations and audio cues. Key features include:
+            </p>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Obstacle & Height Change Detection:</b> Detects obstacles and sudden ground-level changes to help prevent accidents.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠⁠Voice-Activated Assistant & Navigation:</b> Provides real-time navigation, directions, and location information via simple voice commands or a Bluetooth headset.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Rechargeable Battery with Solar Backup:</b> Ensures all-day use, with a built-in solar panel for outdoor power support.</p>
+            </div>
+
+            <div>
+                 <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Ergonomic & Weather-Resistant Design: </b> Lightweight, foldable, and durable for all-weather use, with comfortable handling and easy-to-use controls.</p>
+            </div>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>Time & Info Access: </b> Users can ask the stick for the current time or other essential information at the touch of a button.</p>
+            </div>
+        </div>
+
+              <!-- How to use digital walking stick -->
+        <div class="benefits-section">
+            <h2 class="benefits-title">
+              GUIDELINES FOR USING THE ARTIFICIAL INTELLIGENT DIGITAL WALKING STICK
+            </h2>
+
+            <p class="word">Visually impaired people should follow these instructions when using the digital walking stick to ensure safety and optimal performance:</p>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Wear the elastic strap located at the top of the stick for secure handling.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Turn on the stick by pressing the button on the left-side switch.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"> ⁠Hold the stick in front of your foot while walking.</p>
+            </div>
+
+            <div>
+                 <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">Obstacle Alerts: The stick will vibrate to indicate obstacles:</p>
+            </div>
+                       <div style="padding-left: 30px;">
+                         <div class="benefit-item">
+                <div class="benefit-indicator benefit-indicator-sm"></div>
+                <p class="benefit-text"><b>Low vibration:</b> Detected at approximately 1 meter from obstacles.</p>
+                </div>
+                 <div class="benefit-item">
+                <div class="benefit-indicator benefit-indicator-sm"></div>
+                <p class="benefit-text"><b>High vibration with sound:</b> Detected at 80–0 cm from obstacles.</p>
+                </div>
+                       </div>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"> ⁠Fold the stick when entering cars or other transport to protect it.</p>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Turn off the stick when you reach your destination to save power.</p>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text">⁠Voice-Activated Assistant & Navigation: Simply say commands like “Direct me to [location]” or “Find the nearest bus station.” Get turn-by-turn navigation and real-time info via voice feedback or a Bluetooth headset.</p>
+            </div>
+
+             <div class="benefit-item">
+                <div class="list-indicator"></div>
+                <p class="benefit-text"><b>⁠Clock Feature:</b> Press the button to ask the digital walking stick for the current time.</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Product 3: White Cane -->
+        <div class="product-item">
+            <div class="product-image">
+                <img src="./assets/images/whitecane.png" alt="White Smart Cane">
+            </div>
+            <div class="product-content">
+                <h2>3. WHITE CANE</h2>
+                <p>
+                   The WHITE CANE is a modern, non-digital assistive walking stick designed for visually impaired individuals. While it doesn't include electronic features, it offers a reliable, ergonomic, and highly visible tool to help users navigate safely.
+                </p>
+                <div class="product-price">RWF 20,000</div>
+                <div class="product-buttons">
+                    <a href="#" class="product-btn">Buy</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="benefits-section">
+            <h2 class="benefits-title">Benefits</h2>
+            
+            <div class="benefit-item">
+                <div class="benefit-indicator"></div>
+                <p class="benefit-text">The digital walking stick reduces the challenges and accidents of visually impaired people.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-indicator"></div>
+                <p class="benefit-text">It is cheaper than other walking aids for visually impaired people.</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-indicator"></div>
+                <p class="benefit-text">It promotes the "Made in Rwanda" campaign.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

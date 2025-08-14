@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutus</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .about-hero {
+            position: relative;
+            height: 85vh;
+            background-image: url('./assets/images/partner.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+        }
+        
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 700px;
+            padding: 0 10px;
+        }
+        
+        .about-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+        
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            color: #f8f9fa;
+        }
+        
+        .partner-btn {
+            background: transparent;
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 1px solid white;
+        }
+        
+        .partner-btn:hover {
+            background: rgba(33, 31, 31, 0.291);
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background: white;
+            padding-top: 40px;
+        }
+
+        .info-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+        }
+
+        .sidebar {
+            background: #f1f5f9;
+            min-width: 300px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .sidebar-item {
+            padding: 20px 30px;
+            border-bottom: 1px solid #e2e8f0;
+            cursor: pointer;
+            color: #64748b;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-item:hover {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .sidebar-item.active {
+            background: #1e293b;
+            color: white;
+            font-weight: 600;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 50px;
+            padding-top: 0px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-section h2 {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        /* Partnership Items Styling */
+        .partnership-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0px;
+            padding: 20px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .partnership-content h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .partnership-content p {
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-description {
+                font-size: 1.1rem;
+            }
+            
+            .about-hero {
+                background-attachment: scroll;
+            }
+
+            .info-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                min-width: auto;
+                display: flex;
+                overflow-x: auto;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .sidebar-item {
+                white-space: nowrap;
+                min-width: 150px;
+                text-align: center;
+                border-bottom: none;
+                border-right: 1px solid #e2e8f0;
+            }
+
+            .sidebar-item:last-child {
+                border-right: none;
+            }
+
+            .content-area {
+                padding: 30px;
+            }
+
+            .content-section h2 {
+                font-size: 28px;
+            }
+
+            .partnership-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .partnership-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="about-overlay"></div>
+        <div class="container">
+            <div class="about-content">
+                <h1 class="about-title">R&D Partnership</h1>
+                <p class="about-description">
+               Vizionbot pioneers innovative solutions by uncovering user needs, harnessing emerging technologies, and collaborating with global leaders to create transformative experiences.
+                </p>
+                <a href="#" class="partner-btn">Contact us to become a partner</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="company-info-section container">
+        <div id="profile" class="content-section active">
+                        <h2>Innovating Together</h2>
+<p>
+   At Vizionbot, we are committed to pushing the boundaries of possibility through focused research and development. Our work begins with a deep understanding of the challenges and opportunities our users face, enabling us to identify emerging needs before they become industry trends. We harness cutting-edge technologies, from AI to advanced sensor systems, to design transformative solutions that enhance everyday life.
+</p>
+
+<p>Collaboration is the cornerstone of our approach. We partner with forward-thinking global leaders, academic institutions, and technology innovators to exchange knowledge, co-create breakthroughs, and bring ideas from concept to reality. By uniting our expertise with that of our partners, we ensure every solution we deliver is pioneering, impactful, and ready to meet the demands of an ever-evolving world.</p>
+                    </div>
+
+                    <br/>
+    </section>
+</body>
+</html>
