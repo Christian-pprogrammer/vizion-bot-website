@@ -1834,11 +1834,6 @@ blog
   min-width: 120px; /* Consistent minimum width */
 }
 
-.main-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(60, 197, 237, 0.3);
-}
-
 /* Navigation Buttons */
 .slider-nav {
   display: flex;
