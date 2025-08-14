@@ -36,6 +36,7 @@
             color: white;
             max-width: 600px;
             padding: 0 10px;
+            top: 30px;
         }
         
         .about-title {
@@ -263,6 +264,7 @@
             </div>
         </div>
     </section>
+      <div id="footer"></div>
 
     <script>
         function showContent(sectionId) {
@@ -293,6 +295,13 @@
         document.getElementById("navbar").innerHTML = html;
       })
       .catch(err => console.error("Navbar load failed:", err));
+
+          fetch("footer.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("footer").innerHTML = html;
+      })
+      .catch(err => console.error("Footer load failed:", err));
   </script>
 </body>
 </html>
