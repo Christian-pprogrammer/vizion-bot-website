@@ -200,6 +200,8 @@
     </style>
 </head>
 <body>
+      <div id="navbar"></div>
+
     <!-- Hero Section -->
     <div class="about-hero">
         <div class="about-overlay"></div>
@@ -283,5 +285,14 @@
             event.target.classList.add('active');
         }
     </script>
+
+     <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      })
+      .catch(err => console.error("Navbar load failed:", err));
+  </script>
 </body>
 </html>
