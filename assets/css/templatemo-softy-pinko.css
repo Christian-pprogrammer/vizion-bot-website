@@ -167,6 +167,10 @@ ul {
   margin-bottom: 0px;
 }
 
+button:focus {
+  outline: none;
+}
+
 /* 
 ---------------------------------------------
 global styles
@@ -175,7 +179,7 @@ global styles
 html,
 body {
   background: #fff;
-  font-family:   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 ::selection {
@@ -717,9 +721,8 @@ header
 .dropdown-menu-div {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 65%;
   background: #fff;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
   list-style: none;
   padding: 0;
   z-index: 999;
@@ -849,14 +852,14 @@ welcome
 
 /* NEW: Specific class for hero paragraph to avoid conflicts */
 .welcome-area .header-text .hero-paragraph {
-  font-weight: 400;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 28px;
   color: #fff;
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-bottom: 40px;
   position: relative;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.863);
   max-width: 700px;
 }
 
@@ -1951,7 +1954,6 @@ blog
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: rgba(0, 0, 0, 0.1);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1959,15 +1961,15 @@ blog
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #666;
+  color: #1d1d1d;
   z-index: 10;
   transition: all 0.3s ease;
+  background-color: unset;
+  font-size: 20px;
 }
 
 .news-nav-btn:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: #333;
-  transform: translateY(-50%) scale(1.1);
+  background: unset;
 }
 
 .news-nav-btn.disabled {
