@@ -80,7 +80,7 @@ html[xmlns] .clearfix {
 }
 
 .swiper .slide1 {
-  background-image: url('../images/2.jpg');
+  background-image: url('../images/w_stick.jpg');
 }
 
 .swiper .slide2 {
@@ -2389,9 +2389,9 @@ footer .copyright {
 }
 
 .footer-main {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
-  padding: 50px 20px;
+  padding: 50px 14px;
 }
 
 .footer-grid {
@@ -2532,6 +2532,7 @@ footer .copyright {
   flex-wrap: wrap;
   color: #fff;
   padding: 20px;
+  padding-left: 60px;
 }
 
 .footer-bottom div {
