@@ -317,25 +317,35 @@
                Vizionbot pioneers innovative solutions by uncovering user needs, harnessing emerging technologies, and collaborating with global leaders to create transformative experiences.
                     </p>
                     <div class="flex">
-                        <a href="./corporate-partnership.html" class="main-button secondary-btn-un">Contact us to become a partner</a>
+                        <a href="#contactus" class="main-button secondary-btn-un">Contact us to become a partner</a>
                     </div>
                 </div>
             </div>
             </div>
             </div>
 
-    <section class="company-info-section container">
+    <section class="company-info-section container" style="padding-bottom: 0px;">
         <div id="profile" class="content-section active">
                         <h2>Innovating Together</h2>
 <p>
    At Vizionbot, we are committed to pushing the boundaries of possibility through focused research and development. Our work begins with a deep understanding of the challenges and opportunities our users face, enabling us to identify emerging needs before they become industry trends. We harness cutting-edge technologies, from AI to advanced sensor systems, to design transformative solutions that enhance everyday life.
 </p>
 
-<p>Collaboration is the cornerstone of our approach. We partner with forward-thinking global leaders, academic institutions, and technology innovators to exchange knowledge, co-create breakthroughs, and bring ideas from concept to reality. By uniting our expertise with that of our partners, we ensure every solution we deliver is pioneering, impactful, and ready to meet the demands of an ever-evolving world.</p>
+<p id="contactus">Collaboration is the cornerstone of our approach. We partner with forward-thinking global leaders, academic institutions, and technology innovators to exchange knowledge, co-create breakthroughs, and bring ideas from concept to reality. By uniting our expertise with that of our partners, we ensure every solution we deliver is pioneering, impactful, and ready to meet the demands of an ever-evolving world.</p>
                     </div>
 
                     <br/>
     </section>
+
+         <section class="company-info-section container contactussection justifycontent11" style="padding-top: 20px;">
+        <div id="profile" class="content-section active">
+                        <h2 style="margin-bottom: 50px;">Contact us to become a partner</h2>
+                        <div id="form-container">
+
+                        </div>
+            </div>
+    </section>
+
 
           <div id="footer"></div>
 
@@ -345,6 +355,13 @@
       .then(response => response.text())
       .then(html => {
         document.getElementById("footer").innerHTML = html;
+      })
+      .catch(err => console.error("Footer load failed:", err));
+
+           fetch("contactusform.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("form-container").innerHTML = html;
       })
       .catch(err => console.error("Footer load failed:", err));
   </script>

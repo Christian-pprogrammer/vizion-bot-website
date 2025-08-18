@@ -321,14 +321,14 @@
                     We are always excited to work alongside organizations and visionaries who share our mission.
                     </p>
                     <div class="flex">
-                        <a href="./corporate-partnership.html" class="main-button secondary-btn-un">Contact us to become a partner</a>
+                        <a href="#contactus" class="main-button secondary-btn-un">Contact us to become a partner</a>
                     </div>
                 </div>
             </div>
             </div>
             </div>
 
-    <section class="company-info-section container">
+    <section class="company-info-section container" style="padding-bottom: 10px;">
         <div id="profile" class="content-section active">
                         <h2>Partnering for Inclusion</h2>
                         <p>
@@ -377,7 +377,7 @@
                             </div>
                         </div>
 
-                        <div class="partnership-item">
+                        <div id="contactus" class="partnership-item">
                             <!-- <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop" alt="Collaboration and Growth" class="partnership-image"> -->
                             <div class="partnership-content">
                                 <h3>Collaborative Growth Opportunities</h3>
@@ -387,6 +387,17 @@
                     </div>
     </section>
 
+        <!-- Company Information Section -->
+
+          <section class="company-info-section container contactussection justifycontent11" style="padding-top: 20px;">
+        <div id="profile" class="content-section active">
+                        <h2 style="margin-bottom: 50px;">Contact us to become a partner</h2>
+                        <div id="form-container">
+
+                        </div>
+            </div>
+    </section>
+
           <div id="footer"></div>
 
        <script>
@@ -394,6 +405,13 @@
       .then(response => response.text())
       .then(html => {
         document.getElementById("footer").innerHTML = html;
+      })
+      .catch(err => console.error("Footer load failed:", err));
+
+           fetch("contactusform.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("form-container").innerHTML = html;
       })
       .catch(err => console.error("Footer load failed:", err));
   </script>

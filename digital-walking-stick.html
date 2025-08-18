@@ -283,7 +283,81 @@
     </style>
 </head>
 <body>
-      <div id="navbar"></div>
+           <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="./index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="Softy Pinko" height="20px"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="./index.html">Home</a></li>
+
+                                                        <li class="dropdown">
+                                <a class="active-page" href="./products.html" onclick="toggleDropdown(this)">
+                                    Products <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./ai-digital-walking-stick.html">AI Digital walking stick</a></li>
+                                    <li><a href="./digital-walking-stick.html">Digital walking stick</a></li>
+                                    <li><a href="./whitecane.html">White cane</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./about.html">About Us</a></li>
+                            
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    Partnerships <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./corporate-partnership.html" >Corporate partnership</a></li>
+                                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./contactus.html">Help center</a></li>
+
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="EN" width="20" height="20"> <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="TR" width="20" height="20">
+                                    English</a></li>
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="D" width="20" height="20">
+                                    French</a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png" alt="D" width="20" height="20">
+                                        Swahili
+                                    </a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png" alt="D" width="20" height="20">
+                                    Kinyarwanda</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#order-now" class="desktop-order-now-button">Order Now</a></li>
+                        </ul>
+
+                        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
 
                 <div class="welcome-area swiper">
@@ -320,8 +394,8 @@
                 <div class="product-price">RWF 70,000</div>
                 <div id="features" class="product-buttons">
                     <a href="#" class="product-btn">Buy</a>
-                    <a href="#" class="product-btn secondary">Features</a>
-                    <a href="#" class="product-btn secondary">How to use</a>
+                    <a href="#features" class="product-btn secondary">Features</a>
+                    <a href="#howto" class="product-btn secondary">How to use</a>
                 </div>
             </div>
         </div>
@@ -374,7 +448,7 @@ Key features include:
                 <p class="benefit-text"><b>Adjustable Length:</b> Telescopic shaft to suit users of different heights.</p>
             </div>
 
-            <div class="benefit-item">
+            <div id="howto" class="benefit-item">
                 <div class="list-indicator"></div>
                 <p class="benefit-text"><b>⁠Built-in LED Light:</b> Illuminates the path in low-light environments.</p>
             </div>
@@ -462,12 +536,6 @@ Key features include:
           <div id="footer"></div>
 
        <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-      })
-      .catch(err => console.error("Navbar load failed:", err));
 
           fetch("footer.html")
       .then(response => response.text())
