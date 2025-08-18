@@ -2838,3 +2838,12 @@ p {
 .active-page{
   color:#3CC5ED !important;
 }
+
+.productappcont{
+  display: flex !important;
+}
+
+.productappcont>div>img{
+ height: 100%;
+ width: 400px;
+}
