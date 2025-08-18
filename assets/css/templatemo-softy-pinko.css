@@ -2103,6 +2103,8 @@ blog
   margin: 0 70px;
   position: relative;
   overflow: hidden;
+  /* Add max-width to prevent overflow */
+  max-width: calc(100vw - 140px);
 }
 
 /* Media Post Styles */
@@ -2134,7 +2136,7 @@ blog
   height: 100%;
   border: none;
   border-radius: 25px;
-  pointer-events: none; /* Prevent iframe interference with swiper */
+  pointer-events: none;
 }
 
 .media-video-container img {
@@ -2221,11 +2223,11 @@ blog
 }
 
 .media-swiper-button-prev {
-  left: -80px;
+  left: -70px; /* Reduced from -80px */
 }
 
 .media-swiper-button-next {
-  right: -80px;
+  right: -70px; /* Reduced from -80px */
 }
 
 .media-swiper-button-next:hover,
@@ -2266,43 +2268,81 @@ blog
 }
 
 /* Responsive Adjustments */
+@media (max-width: 992px) {
+  .media-swiper-container {
+    margin: 0 50px;
+    max-width: calc(100vw - 100px);
+  }
+  
+  .media-swiper-button-prev {
+    left: -60px;
+  }
+  
+  .media-swiper-button-next {
+    right: -60px;
+  }
+}
+
 @media (max-width: 768px) {
   .media-video-container {
-      height: 200px;
+    height: 200px;
+  }
+  
+  .media-swiper-container {
+    margin: 0 30px;
+    max-width: calc(100vw - 60px);
   }
   
   .media-swiper-button-next,
   .media-swiper-button-prev {
-      width: 45px;
-      height: 45px;
-      font-size: 16px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
   }
   
   .media-swiper-button-prev {
-      left: -60px;
+    left: -50px;
   }
   
   .media-swiper-button-next {
-      right: -60px;
+    right: -50px;
   }
   
   .section-title {
-      font-size: 28px;
-      margin-bottom: 40px;
-  }
-
-  .media-swiper-container {
-      margin: 0 20px;
+    font-size: 28px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 576px) {
+  .media-swiper-container {
+    margin: 0 20px;
+    max-width: calc(100vw - 40px);
+  }
+  
+  /* Move buttons inside container on mobile */
   .media-swiper-button-prev {
-      left: 10px;
+    left: 10px;
   }
   
   .media-swiper-button-next {
-      right: 10px;
+    right: 10px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .row {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .row {
+    padding: 0 10px !important;
   }
 }
 /* 
@@ -2356,6 +2396,14 @@ contact
   height: 150px;
   resize: none;
   padding: 20px;
+}
+
+.contact-text i {
+  color: #646464;
+  margin-right: 12px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
 }
 
 /* 
