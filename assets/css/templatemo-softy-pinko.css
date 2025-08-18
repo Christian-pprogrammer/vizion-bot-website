@@ -2287,15 +2287,13 @@ blog
   }
 }
 
-/* Add this to prevent body overflow */
 body {
   overflow-x: hidden;
 }
 
-/* Additional fix for section padding */
 @media (max-width: 768px) {
   .row {
-    padding: 0 20px !important; /* Reduce section padding on mobile */
+    padding: 0 20px !important;
   }
 }
 
