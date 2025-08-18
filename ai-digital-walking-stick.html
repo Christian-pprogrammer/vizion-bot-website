@@ -283,24 +283,101 @@
     </style>
 </head>
 <body>
-      <div id="navbar"></div>
-    <!-- Hero Section -->
-    <div class="about-hero">
-        <div class="about-overlay"></div>
+
+       <header class="header-area header-sticky">
         <div class="container">
-            <div class="about-content">
-                <h1 class="about-title">
-                AI DIGITAL WALKING STICK
-                </h1>
-                  <p class="about-description">
-               AI Digital walking stick is equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.
-                </p>
-              <div class="">
-                  <a href="#" class="partner-btn">Buy now</a>
-              </div>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="./index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="Softy Pinko" height="20px"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="./index.html">Home</a></li>
+
+                                                        <li class="dropdown">
+                                <a class="active-page" href="./products.html" onclick="toggleDropdown(this)">
+                                    Products <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./ai-digital-walking-stick.html">AI Digital walking stick</a></li>
+                                    <li><a href="./digital-walking-stick.html">Digital walking stick</a></li>
+                                    <li><a href="./whitecane.html">White cane</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./about.html">About Us</a></li>
+                            
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    Partnerships <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./corporate-partnership.html" >Corporate partnership</a></li>
+                                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./contactus.html">Help center</a></li>
+
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="EN" width="20" height="20"> <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="TR" width="20" height="20">
+                                    English</a></li>
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="D" width="20" height="20">
+                                    French</a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png" alt="D" width="20" height="20">
+                                        Swahili
+                                    </a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png" alt="D" width="20" height="20">
+                                    Kinyarwanda</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#order-now" class="desktop-order-now-button">Order Now</a></li>
+                        </ul>
+
+                        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+
+             <div class="welcome-area swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide slide1" style="background-image: url('./assets/images/w_stick.jpg')">
+                <div class="header-text container">
+                    <p class="hero-paragraph slide-header">AI DIGITAL WALKING STICK</p>
+                    <p class="hero-paragraph">
+               AI Digital walking stick is equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.
+                    </p>
+                    <div class="flex">
+                        <a href="#contact-us" class="main-button">Buy Now</a>
+                        <a href="#features" class="main-button">Features</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
 
     <section class="company-info-section container">
         <!-- Product 2: Digital Walking Stick with AI -->
@@ -309,13 +386,13 @@
             <div class="product-image">
                 <img src="./assets/images/stick_ai.jpeg" alt="Digital Walking Stick with AI">
             </div>
-            <div class="product-content">
+            <div  class="product-content">
                 <h2>DIGITAL WALKING STICK WITH AI</h2>
                 <p>
                    The Artificial Intelligent Digital Walking Stick by Vizion Bot is a cutting-edge assistive device designed to enhance the independence and safety of visually impaired people. Equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.
                 </p>
                 <div class="product-price">RWF 120,000</div>
-                <div class="product-buttons">
+                <div id="features" class="product-buttons">
                     <a href="#" class="product-btn">Buy</a>
                     <a href="#" class="product-btn secondary">Features</a>
                     <a href="#" class="product-btn secondary">How to use</a>
@@ -323,9 +400,8 @@
             </div>
         </div>
 
-
                   <!--features of digital walking stick with ai -->
-        <div class="benefits-section">
+        <div  class="benefits-section">
             <h2 class="benefits-title">
                 KEY FEATURES OF THE AI DIGITAL WALKING STICK
             </h2>
@@ -448,12 +524,6 @@
           <div id="footer"></div>
 
        <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-      })
-      .catch(err => console.error("Navbar load failed:", err));
 
           fetch("footer.html")
       .then(response => response.text())

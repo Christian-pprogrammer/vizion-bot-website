@@ -12,8 +12,7 @@
     <style>
         .about-hero {
             position: relative;
-            height: 85vh;
-            background-image: url('./assets/images/stick_about.jpg');
+            height: 111vh;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -34,9 +33,7 @@
             position: relative;
             z-index: 2;
             color: white;
-            max-width: 600px;
-            padding: 0 10px;
-            top: 30px;
+            max-width: 900px;
         }
         
         .about-title {
@@ -201,24 +198,102 @@
     </style>
 </head>
 <body>
-      <div id="navbar"></div>
-
-    <!-- Hero Section -->
-    <div class="about-hero">
-        <div class="about-overlay"></div>
+    
+     <header class="header-area header-sticky">
         <div class="container">
-            <div class="about-content">
-                <h1 class="about-title">About Vizionbot</h1>
-                <p class="about-description">
-                    Vizion Bot Ltd creates innovative digital walking sticks for visually impaired individuals. Our advanced stick features obstacle detection up to 1 meter, vibration alerts, solar-powered battery, and adjustable design for safe, confident mobility.
-                </p>
-                <a href="#" class="partner-btn">Become Partner</a>
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="./index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="Softy Pinko" height="20px"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="./index.html">Home</a></li>
+
+                                                        <li class="dropdown">
+                                <a href="./products.html" onclick="toggleDropdown(this)">
+                                    Products <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./ai-digital-walking-stick.html">AI Digital walking stick</a></li>
+                                    <li><a href="./digital-walking-stick.html">Digital walking stick</a></li>
+                                    <li><a href="./whitecane.html">White cane</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="active-page" href="./about.html">About Us</a></li>
+                            
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    Partnerships <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="./corporate-partnership.html">Corporate partnership</a></li>
+                                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="./contactus.html">Help center</a></li>
+
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                                    <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="EN" width="20" height="20"> <i class="fas fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu-div">
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="TR" width="20" height="20">
+                                    English</a></li>
+                                    <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="D" width="20" height="20">
+                                    French</a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png" alt="D" width="20" height="20">
+                                        Swahili
+                                    </a></li>
+
+                                     <li><a href="#">
+                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png" alt="D" width="20" height="20">
+                                    Kinyarwanda</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#order-now" class="desktop-order-now-button">Order Now</a></li>
+                        </ul>
+
+                        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+
+         <div class="welcome-area swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide slide1" style="background-image: url('./assets/images/stick_about.jpg')">
+                <div class="header-text container">
+                    <p class="hero-paragraph slide-header">About Vizionbot</p>
+                    <p class="hero-paragraph">
+                    Vizion Bot develops innovative assistive devices to improve independence, mobility, and safety for people with visual impairments. Its AI-powered Digital Walking Stick uses advanced sensors, voice navigation, and ergonomic design to detect hazards and guide users.
+                    </p>
+                    <div class="flex">
+                        <a href="./corporate-partnership.html" class="main-button">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
 
     <!-- Company Information Section -->
-    <section class="company-info-section container">
+    <section class="company-info-section">
         <div class="container">
             <div class="info-container">
                 <div class="sidebar">
@@ -289,12 +364,6 @@
     </script>
 
      <script>
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-      })
-      .catch(err => console.error("Navbar load failed:", err));
 
           fetch("footer.html")
       .then(response => response.text())

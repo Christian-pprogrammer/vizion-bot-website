@@ -155,6 +155,10 @@ html[xmlns] .clearfix {
   color: #fff;
 }
 
+a.secondary-btn-un {
+  background-color: #ffff !important;
+  color: #3B566E !important;
+}
 
 ul, li {
   padding: 0;
@@ -902,13 +906,14 @@ welcome
   letter-spacing: 0.5px;
   margin-bottom: 40px;
   position: relative;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.863);
+  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.863); */
   max-width: 900px;
 }
 
 .slide-header{
   margin-bottom: 10px !important;
   font-weight: 700 !important;
+  color: #3EC6EC !important;
 }
 
 /* Button styles */
@@ -1883,6 +1888,9 @@ blog
   display: inline-block; /* Keep as inline-block to maintain pill shape */
   transition: all 0.3s ease;
   min-width: 120px; /* Consistent minimum width */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Navigation Buttons */
