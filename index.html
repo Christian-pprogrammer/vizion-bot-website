@@ -1,650 +1,900 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
 
     <title>Vizion bot</title>
-<!--
+    <!--
 SOFTY PINKO
 https://templatemo.com/tm-535-softy-pinko
 -->
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
 
-    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    </head>
-    
-    <body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
     <!-- ***** Header Area Start ***** -->
- <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="./index.html" class="logo">
-                            <img src="assets/images/logo.png" alt="Softy Pinko" height="20px"/>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a class="active-page" href="./index.html">Home</a></li>
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="./index.html" class="logo">
+                <img
+                  src="assets/images/logo.png"
+                  alt="Softy Pinko"
+                  height="20px"
+                />
+              </a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav">
+                <li><a class="active-page" href="./index.html">Home</a></li>
 
-                                                        <li class="dropdown">
-                                <a href="./products.html" onclick="toggleDropdown(this)">
-                                    Products <i class="fas fa-caret-down"></i>
-                                </a>
-                                <ul class="dropdown-menu-div">
-                                    <li><a href="./ai-digital-walking-stick.html">AI Digital walking stick</a></li>
-                                    <li><a href="./digital-walking-stick.html">Digital walking stick</a></li>
-                                    <li><a href="./whitecane.html">White cane</a></li>
-                                </ul>
-                            </li>
+                <li class="dropdown">
+                  <a href="./products.html" onclick="toggleDropdown(this)">
+                    Products <i class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu-div">
+                    <li>
+                      <a href="./ai-digital-walking-stick.html"
+                        >AI Digital walking stick</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./digital-walking-stick.html"
+                        >Digital walking stick</a
+                      >
+                    </li>
+                    <li><a href="./whitecane.html">White cane</a></li>
+                  </ul>
+                </li>
 
-                            <li><a href="./about.html">About Us</a></li>
-                            
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
-                                    Partnerships <i class="fas fa-caret-down"></i>
-                                </a>
-                                <ul class="dropdown-menu-div">
-                                    <li><a href="./corporate-partnership.html">Corporate partnership</a></li>
-                                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
-                                </ul>
-                            </li>
+                <li><a href="./about.html">About Us</a></li>
 
-                            <li><a href="./contactus.html">Help center</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                    Partnerships <i class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu-div">
+                    <li>
+                      <a href="./corporate-partnership.html"
+                        >Corporate partnership</a
+                      >
+                    </li>
+                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
+                  </ul>
+                </li>
 
-                            <li class="dropdown">
-                                <a href="javascript:void(0);" onclick="toggleDropdown(this)">
-                                    <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="EN" width="20" height="20"> <i class="fas fa-caret-down"></i>
-                                </a>
-                                <ul class="dropdown-menu-div">
-                                    <li><a href="#">
-                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="TR" width="20" height="20">
-                                    English</a></li>
-                                    <li><a href="#">
-                                        <img class="wpml-ls-flag" src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="D" width="20" height="20">
-                                    French</a></li>
+                <li><a href="./contactus.html">Help center</a></li>
 
-                                     <li><a href="#">
-                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png" alt="D" width="20" height="20">
-                                        Swahili
-                                    </a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                    <img
+                      class="wpml-ls-flag"
+                      src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
+                      alt="EN"
+                      width="20"
+                      height="20"
+                    />
+                    <i class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu-div">
+                    <li>
+                      <a href="#">
+                        <img
+                          class="wpml-ls-flag"
+                          src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
+                          alt="TR"
+                          width="20"
+                          height="20"
+                        />
+                        English</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img
+                          class="wpml-ls-flag"
+                          src="https://cdn.countryflags.com/thumbs/france/flag-800.png"
+                          alt="D"
+                          width="20"
+                          height="20"
+                        />
+                        French</a
+                      >
+                    </li>
 
-                                     <li><a href="#">
-                                        <img class="wpml-ls-flag" src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png" alt="D" width="20" height="20">
-                                    Kinyarwanda</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#order-now" class="desktop-order-now-button">Order Now</a></li>
-                        </ul>
+                    <li>
+                      <a href="#">
+                        <img
+                          class="wpml-ls-flag"
+                          src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png"
+                          alt="D"
+                          width="20"
+                          height="20"
+                        />
+                        Swahili
+                      </a>
+                    </li>
 
-                        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
+                    <li>
+                      <a href="#">
+                        <img
+                          class="wpml-ls-flag"
+                          src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png"
+                          alt="D"
+                          width="20"
+                          height="20"
+                        />
+                        Kinyarwanda</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#order-now" class="desktop-order-now-button"
+                    >Order Now</a
+                  >
+                </li>
+              </ul>
+
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area swiper">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide slide1">
-                <div class="header-text container">
-                    <p class="hero-paragraph slide-header">WE MIND YOUR STEP</p>
-                    <p class="hero-paragraph">
-                        We make innovative digital walking sticks <br/>that help visually impaired people move independently.
-                    </p>
-                    <div class="flex">
-                        <a href="#contact-us" class="main-button">Order Now</a>
-                        <a href="./products.html" class="main-button">Learn More</a>
-                    </div>
-                </div>
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide slide1">
+          <div class="header-text container">
+            <p class="hero-paragraph slide-header">WE MIND YOUR STEP</p>
+            <p class="hero-paragraph">
+              We make innovative digital walking sticks <br />that help visually
+              impaired people move independently.
+            </p>
+            <div class="flex">
+              <a href="#contact-us" class="main-button">Order Now</a>
+              <a href="./products.html" class="main-button">Learn More</a>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide slide2">
-                <div class="header-text container">
-                    <p class="hero-paragraph slide-header">Innovation in Accessibility</p>
-                    <p class="hero-paragraph">
-                        Empowering independence through
-                        cutting-edge assistive technology
-                        and thoughtful design.
-                    </p>
-                    <div class="flex">
-                        <a href="#contact-us" class="main-button">Order Now</a>
-                        <a href="#blog" class="main-button">Learn More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide slide3">
-                <div class="header-text container">
-                    <p class="hero-paragraph slide-header">Engineering Today’s Solutions</p>
-                    <p class="hero-paragraph">
-                        Where technology meets compassion
-                        to create life-changing experiences
-                        for the visually impaired community.
-                    </p>
-                    <div class="flex">
-                        <a href="#contact-us" class="main-button">Order Now</a>
-                        <a href="#blog" class="main-button">Learn More</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide slide2">
+          <div class="header-text container">
+            <p class="hero-paragraph slide-header">
+              Innovation in Accessibility
+            </p>
+            <p class="hero-paragraph">
+              Empowering independence through cutting-edge assistive technology
+              and thoughtful design.
+            </p>
+            <div class="flex">
+              <a href="#contact-us" class="main-button">Order Now</a>
+              <a href="#blog" class="main-button">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide slide3">
+          <div class="header-text container">
+            <p class="hero-paragraph slide-header">
+              Engineering Today’s Solutions
+            </p>
+            <p class="hero-paragraph">
+              Where technology meets compassion to create life-changing
+              experiences for the visually impaired community.
+            </p>
+            <div class="flex">
+              <a href="#contact-us" class="main-button">Order Now</a>
+              <a href="#blog" class="main-button">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <!-- ***** Welcome Area End ***** -->
 
     <section class="company-info-section container">
-        <div id="digital-walking-stick-ai">
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="./assets/images/stick_ai.jpeg" alt="AI Digital Walking Stick">
-                </div>
-                <div class="product-content">
-                    <h2>AI Digital Walking Stick</h2>
-                    <p>
-                        The Artificial Intelligent Digital Walking Stick by Vizion Bot is a cutting-edge assistive device designed to enhance the independence and safety of visually impaired people. Equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.
-                    </p>
-                    <div class="product-buttons">
-                        <a href="./ai-digital-walking-stick.html" class="product-btn">Learn More</a>
-                        <a href="#" class="product-btn secondary">Order now</a>
-                    </div>
-                </div>
+      <div id="digital-walking-stick-ai">
+        <div class="product-item">
+          <div class="product-image">
+            <img
+              src="./assets/images/stick_ai.jpeg"
+              alt="AI Digital Walking Stick"
+            />
+          </div>
+          <div class="product-content">
+            <h2>AI Digital Walking Stick</h2>
+            <p>
+              The Artificial Intelligent Digital Walking Stick by Vizion Bot is
+              a cutting-edge assistive device designed to enhance the
+              independence and safety of visually impaired people. Equipped with
+              advanced sensors and AI technology, it scans the surroundings to
+              detect both ground-level and overhead obstacles, alerting users
+              through vibrations and sound.
+            </p>
+            <div class="product-buttons">
+              <a href="./ai-digital-walking-stick.html" class="product-btn"
+                >Learn More</a
+              >
+              <a href="#" class="product-btn secondary">Order now</a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-    <section class="company-info-section container">
-        <div id="digital-walking-stick">
-            <div class="product-item">
-                <div class="product-image order-2">
-                    <img src="./assets/images/stick_.jpeg" alt="Digital Walking Stick">
-                </div>
-                <div class="product-content">
-                    <h2>Digital Walking Stick</h2>
-                    <p>
-                        The digital walking stick is an innovative assistive device designed for visually impaired people. It helps users navigate safely by scanning their surroundings and detecting obstacles in real time. Additionally, it serves as a signal to others, making it easier to recognize visually impaired people and provide them with appropriate assistance.
-                    </p>
-                    <div class="product-buttons">
-                        <a href="./digital-walking-stick.html" class="product-btn">Learn More</a>
-                        <a href="#" class="product-btn secondary">Order now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="company-info-section container">
-        <div id="white-cane">
-            <div class="product-item">
-                <div class="product-image">
-                    <img src="./assets/images/whitecane.png" alt="Accessory - White Cane">
-                </div>
-                <div class="product-content">
-                    <h2>Accessory - White Cane</h2>
-                    <p>
-                        The WHITE CANE is a modern, non-digital assistive walking stick designed for visually impaired individuals. While it doesn't include electronic features, it offers a reliable, ergonomic, and highly visible tool to help users navigate safely.
-                    </p>
-                    <div class="product-buttons">
-                        <a href="./whitecane.html" class="product-btn">Learn More</a>
-                        <a href="#" class="product-btn secondary">Order now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
 
-        <section class="section colored" style="min-height: 100vh;">
+    <section class="company-info-section container">
+      <div id="digital-walking-stick">
+        <div class="product-item">
+          <div class="product-image order-2">
+            <img
+              src="./assets/images/stick_.jpeg"
+              alt="Digital Walking Stick"
+            />
+          </div>
+          <div class="product-content">
+            <h2>Digital Walking Stick</h2>
+            <p>
+              The digital walking stick is an innovative assistive device
+              designed for visually impaired people. It helps users navigate
+              safely by scanning their surroundings and detecting obstacles in
+              real time. Additionally, it serves as a signal to others, making
+              it easier to recognize visually impaired people and provide them
+              with appropriate assistance.
+            </p>
+            <div class="product-buttons">
+              <a href="./digital-walking-stick.html" class="product-btn"
+                >Learn More</a
+              >
+              <a href="#" class="product-btn secondary">Order now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-info-section container">
+      <div id="white-cane">
+        <div class="product-item">
+          <div class="product-image">
+            <img
+              src="./assets/images/whitecane.png"
+              alt="Accessory - White Cane"
+            />
+          </div>
+          <div class="product-content">
+            <h2>Accessory - White Cane</h2>
+            <p>
+              The WHITE CANE is a modern, non-digital assistive walking stick
+              designed for visually impaired individuals. While it doesn't
+              include electronic features, it offers a reliable, ergonomic, and
+              highly visible tool to help users navigate safely.
+            </p>
+            <div class="product-buttons">
+              <a href="./whitecane.html" class="product-btn">Learn More</a>
+              <a href="#" class="product-btn secondary">Order now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section colored">
         <div class="container productappcont-cont">
             <div class="productappcont">
-<div>
-    <h2 style="margin-bottom: 40px;">Download Vizion Bot Smart App for IOS<br>and Anroid and pair your AI Digital<br> stick to benefit all these revolutionary features.</h2>
-
-       <a href="#"><img src="./assets/images/play-store-logo-w-1.svg" alt="Google Play"></a>
-       &nbsp;&nbsp;
-       <a href="#"><img src="./assets/images/app-store-logo-w-1.svg" alt="App Store"></a>
-</div>
-
-<div>
-    <img src="./assets/images/phoneapp.png" alt="">
-</div>
-</div>
-
-            </div>
-            </section>
-
-    <section class="section" id="media">
-        <div class="">
-            <!-- Section Title -->
-            <div class="row" style="padding: 0 70px;">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title"><span style="opacity: 0.4;">Visionbot</span> <br/>Media Coverage</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news-media-container">
-                <div class="swiper news-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- CBS News -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="CBS News" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        
-                        <!-- Bloomberg -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/fox.png" alt="Bloomberg" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- BuzzFeed -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="BuzzFeed" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- CNN -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/fox.png" alt="CNN" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- Forbes -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="Forbes" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- NowThis -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="NowThis" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- The Times -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="The Times" class="news-logo">
-                            </div>
-                        </div>
-                        
-                        <!-- Mashable -->
-                        <div class="swiper-slide">
-                            <div class="news-slide">
-                                <img src="./assets/images/cbs.png" alt="Mashable" class="news-logo">
-                            </div>
-                        </div>
+                <div class="content-section">
+                    <h2>
+                        Download <span class="highlight">Vizion Bot</span> Smart App for iOS and Android and pair your AI Digital stick to benefit all these revolutionary features.
+                    </h2>
+                    
+                    <p class="subtitle">
+                        Experience the future of AI-powered assistance with our revolutionary mobile app. Connect, control, and customize your digital world like never before.
+                    </p>
+                    
+                    <div class="download-buttons flex">
+                        <a href="#" class="store-button playstore">
+                            <i class="fab fa-google-play"></i>
+                            Get it on Google Play
+                        </a>
+                        <a href="#" class="store-button appstore">
+                            <i class="fab fa-apple"></i>
+                            Download on App Store
+                        </a>
                     </div>
                 </div>
                 
-                <!-- Navigation Arrows -->
-                <button class="news-nav-btn news-nav-prev" id="newsPrevBtn">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="news-nav-btn news-nav-next" id="newsNextBtn">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-            </div>
-    
-
-            <!-- Swiper Container -->
-            <div class="media-swiper-container">
-                <div class="mediaSwiper">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <img src="https://via.placeholder.com/400x250/3CC5ED/white?text=Aviation+Innovation" alt="Aviation Innovation Showcase">
-                                    <div class="video-overlay"></div>
-                                    <div class="play-button-overlay"></div>
-                                    <div class="media-title">
-                                        <h3>Aviation Innovation Showcase</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="phone-section">
+                    <div class="phone-container">
+                        <div class="phone">
+                            <img
+                                src="./assets/images/phoneapp.png"
+                                alt="Phone"
+                                class="phone-image"
+                                width="500"
+                            />
                         
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/ScMzIvxBSi4" 
-                                        title="CAA Safety Standards Overview"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>CAA Safety Standards Overview</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/hFZFjoX2cGg" 
-                                        title="Future of Aviation Technology"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>Future of Aviation Technology</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/0PVpAWg2NMw?si=VIEjFgFaHQyRXeXs" 
-                                        title="Airport Operations Excellence"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>Airport Operations Excellence</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 5 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/M7lc1UVf-VE" 
-                                        title="Environmental Sustainability in Aviation"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>Environmental Sustainability in Aviation</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 6 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/xxGtQlSJb-8?si=o1ZVR1B6JtfV69Y" 
-                                        title="Aviation Career Opportunities"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>Aviation Career Opportunities</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 7 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/r9Bm3nq42ek?si=u01qw223p2Qit83P" 
-                                        title="International Aviation Partnerships"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>International Aviation Partnerships</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 8 -->
-                        <div class="swiper-slide">
-                            <div class="media-post-thumb">
-                                <div class="media-video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/gCcx85zbxz4" 
-                                        title="Digital Transformation in Aviation"
-                                        allowfullscreen
-                                        loading="lazy">
-                                    </iframe>
-                                    <div class="media-title">
-                                        <h3>Digital Transformation in Aviation</h3>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="floating-elements">
+                            <div class="floating-element"></div>
+                            <div class="floating-element"></div>
+                            <div class="floating-element"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="section" id="media">
+      <div class="">
+        <!-- Section Title -->
+        <div class="row" style="padding: 0 70px">
+          <div class="col-lg-12">
+            <div class="center-heading">
+              <h2 class="section-title">
+                <span style="opacity: 0.4">Visionbot</span> <br />Media Coverage
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-media-container">
+          <div class="swiper news-swiper">
+            <div class="swiper-wrapper">
+              <!-- CBS News -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="CBS News"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- Bloomberg -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/fox.png"
+                    alt="Bloomberg"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- BuzzFeed -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="BuzzFeed"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- CNN -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/fox.png"
+                    alt="CNN"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- Forbes -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="Forbes"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- NowThis -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="NowThis"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- The Times -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="The Times"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+
+              <!-- Mashable -->
+              <div class="swiper-slide">
+                <div class="news-slide">
+                  <img
+                    src="./assets/images/cbs.png"
+                    alt="Mashable"
+                    class="news-logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button class="news-nav-btn news-nav-prev" id="newsPrevBtn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="news-nav-btn news-nav-next" id="newsNextBtn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="media-swiper-container">
+          <div class="mediaSwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <img
+                      src="https://via.placeholder.com/400x250/3CC5ED/white?text=Aviation+Innovation"
+                      alt="Aviation Innovation Showcase"
+                    />
+                    <div class="video-overlay"></div>
+                    <div class="play-button-overlay"></div>
+                    <div class="media-title">
+                      <h3>Aviation Innovation Showcase</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                      title="CAA Safety Standards Overview"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>CAA Safety Standards Overview</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/hFZFjoX2cGg"
+                      title="Future of Aviation Technology"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>Future of Aviation Technology</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/0PVpAWg2NMw?si=VIEjFgFaHQyRXeXs"
+                      title="Airport Operations Excellence"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>Airport Operations Excellence</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/M7lc1UVf-VE"
+                      title="Environmental Sustainability in Aviation"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>Environmental Sustainability in Aviation</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/xxGtQlSJb-8?si=o1ZVR1B6JtfV69Y"
+                      title="Aviation Career Opportunities"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>Aviation Career Opportunities</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/r9Bm3nq42ek?si=u01qw223p2Qit83P"
+                      title="International Aviation Partnerships"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>International Aviation Partnerships</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="swiper-slide">
+                <div class="media-post-thumb">
+                  <div class="media-video-container">
+                    <iframe
+                      src="https://www.youtube.com/embed/gCcx85zbxz4"
+                      title="Digital Transformation in Aviation"
+                      allowfullscreen
+                      loading="lazy"
+                    >
+                    </iframe>
+                    <div class="media-title">
+                      <h3>Digital Transformation in Aviation</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ***** Testimonials End ***** -->
 
     <!-- ***** Counter Parallax Start ***** -->
-    <!-- ***** Counter Parallax End ***** -->   
+    <!-- ***** Counter Parallax End ***** -->
 
     <!-- ***** Blog Start ***** -->
     <section class="section" id="blog">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title">Achievements</h2>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- ***** Section Title Start ***** -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="center-heading">
+              <h2 class="section-title">Achievements</h2>
             </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="slider-container">
-                <div class="slider-wrapper" id="sliderWrapper">
-                    <div class="slide">
-                        <div class="blog-post-thumb">
-                            <div class="img" style="background-image: url('./assets/images/Certificate_of_Merit.jpg'); background-size: cover; background-position: center center;">
-                            </div>
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="#">Certificate | Ministry of Education</a>
-                                </h3>
-                                <a href="#" class="main-button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blog-post-thumb">
-                            <div class="img" style="background-image: url('./assets/images/Certificate2..jpg'); background-size: cover; background-position: center center;">
-                            </div>
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="#">INNOVATE4DISABILITY Hackathon</a>
-                                </h3>
-                                <a href="#" class="main-button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Additional slides for demonstration -->
-                    <div class="slide">
-                        <div class="blog-post-thumb">
-                            <div class="img" style="background-image: url('./assets/images/champions.jpeg'); background-size: cover; background-position: center center;">
-                            </div>
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="#">Excellence Award</a>
-                                </h3>
-                                <a href="#" class="main-button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blog-post-thumb">
-                            <div class="img" style="background-image: url('https://via.placeholder.com/400x200/4ECDC4/white?text=Award+5'); background-size: cover; background-position: center center;">
-                            </div>
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="#">Innovation Prize</a>
-                                </h3>
-                                <a href="#" class="main-button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="blog-post-thumb">
-                            <div class="img" style="background-image: url('https://via.placeholder.com/400x200/45B7D1/white?text=Award+6'); background-size: cover; background-position: center center;">
-                            </div>
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="#">Leadership Recognition</a>
-                                </h3>
-                                <a href="#" class="main-button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="slider-nav">
-                <button class="nav-btn" id="prevBtn" onclick="moveSlide(-1)">‹</button>
-                <button class="nav-btn" id="nextBtn" onclick="moveSlide(1)">›</button>
-            </div>
-
-            <!-- Dots indicator -->
-            <div class="slider-dots" id="dotsContainer"></div>
+          </div>
         </div>
-    </section>   
-    
+        <!-- ***** Section Title End ***** -->
+
+        <div class="slider-container">
+          <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slide">
+              <div class="blog-post-thumb">
+                <div
+                  class="img"
+                  style="
+                    background-image: url('./assets/images/Certificate_of_Merit.jpg');
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                ></div>
+                <div class="blog-content">
+                  <h3>
+                    <a href="#">Certificate | Ministry of Education</a>
+                  </h3>
+                  <a href="#" class="main-button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="blog-post-thumb">
+                <div
+                  class="img"
+                  style="
+                    background-image: url('./assets/images/Certificate2..jpg');
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                ></div>
+                <div class="blog-content">
+                  <h3>
+                    <a href="#">INNOVATE4DISABILITY Hackathon</a>
+                  </h3>
+                  <a href="#" class="main-button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Additional slides for demonstration -->
+            <div class="slide">
+              <div class="blog-post-thumb">
+                <div
+                  class="img"
+                  style="
+                    background-image: url('./assets/images/champions.jpeg');
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                ></div>
+                <div class="blog-content">
+                  <h3>
+                    <a href="#">Excellence Award</a>
+                  </h3>
+                  <a href="#" class="main-button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="blog-post-thumb">
+                <div
+                  class="img"
+                  style="
+                    background-image: url('https://via.placeholder.com/400x200/4ECDC4/white?text=Award+5');
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                ></div>
+                <div class="blog-content">
+                  <h3>
+                    <a href="#">Innovation Prize</a>
+                  </h3>
+                  <a href="#" class="main-button">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="blog-post-thumb">
+                <div
+                  class="img"
+                  style="
+                    background-image: url('https://via.placeholder.com/400x200/45B7D1/white?text=Award+6');
+                    background-size: cover;
+                    background-position: center center;
+                  "
+                ></div>
+                <div class="blog-content">
+                  <h3>
+                    <a href="#">Leadership Recognition</a>
+                  </h3>
+                  <a href="#" class="main-button">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="slider-nav">
+          <button class="nav-btn" id="prevBtn" onclick="moveSlide(-1)">
+            ‹
+          </button>
+          <button class="nav-btn" id="nextBtn" onclick="moveSlide(1)">›</button>
+        </div>
+
+        <!-- Dots indicator -->
+        <div class="slider-dots" id="dotsContainer"></div>
+      </div>
+    </section>
+
     <!-- ***** Blog End ***** -->
 
     <!-- ***** Contact Us Start ***** -->
     <section class="section colored" id="contact-us">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading py-2">
-                        <h2 class="section-title">Get In Touch</h2>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- ***** Section Title Start ***** -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="center-heading py-2">
+              <h2 class="section-title">Get In Touch</h2>
             </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="row">
-                <!-- ***** Contact Text Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <h5 class="margin-bottom-30">Rwanda - Kigali city office</h5>
-                    <div class="contact-text">
-                        <p><i class="fa-solid fa-location-dot"></i>Kigali city - Rwanda - Gasabo, IIL</p>
-                        <p><i class="fa-solid fa-phone"></i>(+250) 788545299</p>
-                        <p><i class="fa-solid fa-envelope"></i>vizionbot@gmail.com</p>
-                        <p><i class="fas fa-globe-americas"></i>www.vizionbot.org</p>
-                    </div>
-                </div>
-                <!-- ***** Contact Text End ***** -->
-
-                <!-- ***** Contact Form Start ***** -->
-                <div class="col-lg-8 col-md-6 col-sm-12">
-                    <div class="contact-form">
-                        <form id="contact" action="" method="get">
-                          <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="first_name" type="text" class="form-control" id="first_name" placeholder="First Name" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Last Name" required="">
-                              </fieldset>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <fieldset>
-                                  <input name="email" type="text" class="form-control" id="email" placeholder="Email" required="">
-                                </fieldset>
-                              </div>
-
-                              <div class="col-lg-12">
-                                <fieldset>
-                                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
-                                </fieldset>
-                              </div>
-                            
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Write to us" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- ***** Contact Form End ***** -->
-            </div>
+          </div>
         </div>
+        <!-- ***** Section Title End ***** -->
+
+        <div class="row">
+          <!-- ***** Contact Text Start ***** -->
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <h5 class="margin-bottom-30">Rwanda - Kigali city office</h5>
+            <div class="contact-text">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>Kigali city - Rwanda -
+                Gasabo, IIL
+              </p>
+              <p><i class="fa-solid fa-phone"></i>(+250) 788545299</p>
+              <p><i class="fa-solid fa-envelope"></i>vizionbot@gmail.com</p>
+              <p><i class="fas fa-globe-americas"></i>www.vizionbot.org</p>
+            </div>
+          </div>
+          <!-- ***** Contact Text End ***** -->
+
+          <!-- ***** Contact Form Start ***** -->
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <div class="contact-form">
+              <form id="contact" action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="first_name"
+                        type="text"
+                        class="form-control"
+                        id="first_name"
+                        placeholder="First Name"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="last_name"
+                        type="text"
+                        class="form-control"
+                        id="last_name"
+                        placeholder="Last Name"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input
+                        name="email"
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        placeholder="Email"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <input
+                        name="subject"
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder="Subject"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea
+                        name="message"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Write to us"
+                        required=""
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button
+                        type="submit"
+                        id="form-submit"
+                        class="main-button"
+                      >
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- ***** Contact Form End ***** -->
+        </div>
+      </div>
     </section>
     <!-- ***** Contact Us End ***** -->
-    
-  <div id="footer"></div>
-      
-      <!-- Font Awesome -->
-      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-      
-    
+
+    <div id="footer"></div>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -656,364 +906,365 @@ https://templatemo.com/tm-535-softy-pinko
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    
+    <script src="assets/js/imgfix.min.js"></script>
+
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    const swiper = new Swiper(".welcome-area", {
-            effect: "fade",
-            loop: true,
-            speed: 1000,            // 1 second fade transition
-            autoplay: {
-                delay: 5000,        // 5 seconds on each slide
-                disableOnInteraction: false,  // Keep autoplay even after user interaction
-                pauseOnMouseEnter: true,      // Pause on hover, resume when mouse leaves
-                reverseDirection: false,      // Normal direction
-            },
-            fadeEffect: {
-                crossFade: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            // Keyboard navigation
-            keyboard: {
-                enabled: true,
-            },
-            // Touch/swipe on mobile
-            touchRatio: 1,
-            touchAngle: 45,
-            grabCursor: true,
-            // Ensure autoplay works properly
-            allowTouchMove: true,
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper(".welcome-area", {
+        effect: "fade",
+        loop: true,
+        speed: 1000, // 1 second fade transition
+        autoplay: {
+          delay: 5000, // 5 seconds on each slide
+          disableOnInteraction: false, // Keep autoplay even after user interaction
+          pauseOnMouseEnter: true, // Pause on hover, resume when mouse leaves
+          reverseDirection: false, // Normal direction
+        },
+        fadeEffect: {
+          crossFade: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        // Keyboard navigation
+        keyboard: {
+          enabled: true,
+        },
+        // Touch/swipe on mobile
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true,
+        // Ensure autoplay works properly
+        allowTouchMove: true,
+      });
+
+      // Force start autoplay (in case it doesn't start automatically)
+      swiper.autoplay.start();
+
+      // Debug logs
+      swiper.on("autoplayStart", function () {
+        console.log("Autoplay started");
+      });
+
+      swiper.on("autoplayStop", function () {
+        console.log("Autoplay stopped");
+      });
+
+      swiper.on("slideChange", function () {
+        console.log("Slide changed to:", swiper.realIndex + 1);
+      });
+
+      // Debug: Log when navigation buttons are clicked
+      document
+        .querySelector(".swiper-button-next")
+        ?.addEventListener("click", function () {
+          console.log("Next button clicked");
         });
 
-        // Force start autoplay (in case it doesn't start automatically)
-        swiper.autoplay.start();
-
-        // Debug logs
-        swiper.on('autoplayStart', function () {
-            console.log('Autoplay started');
+      document
+        .querySelector(".swiper-button-prev")
+        ?.addEventListener("click", function () {
+          console.log("Previous button clicked");
         });
 
-        swiper.on('autoplayStop', function () {
-            console.log('Autoplay stopped');
-        });
-
-        swiper.on('slideChange', function () {
-            console.log('Slide changed to:', swiper.realIndex + 1);
-        });
-
-        // Debug: Log when navigation buttons are clicked
-        document.querySelector('.swiper-button-next')?.addEventListener('click', function() {
-            console.log('Next button clicked');
-        });
-
-        document.querySelector('.swiper-button-prev')?.addEventListener('click', function() {
-            console.log('Previous button clicked');
-        });
-
-        // Enhanced Partners Swiper
-        var newPartnersSwiper = new Swiper(".newPartnersSwiper", {
+      // Enhanced Partners Swiper
+      var newPartnersSwiper = new Swiper(".newPartnersSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: ".new-partners-swiper .partners-swiper-button-next",
+          prevEl: ".new-partners-swiper .partners-swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
             slidesPerView: 4,
             spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            navigation: {
-                nextEl: ".new-partners-swiper .partners-swiper-button-next",
-                prevEl: ".new-partners-swiper .partners-swiper-button-prev",
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 25,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-            }
+          },
+        },
+      });
+
+      // Add loading animation for images
+      document
+        .querySelectorAll(".partner-image-container img")
+        .forEach((img) => {
+          img.addEventListener("load", function () {
+            this.style.opacity = "1";
+          });
         });
 
-        // Add loading animation for images
-        document.querySelectorAll('.partner-image-container img').forEach(img => {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-            });
-        });
+      class AchievementsSlider {
+        constructor() {
+          this.currentSlide = 0;
+          this.slidesPerView = this.getSlidesPerView();
+          this.totalSlides = document.querySelectorAll(".slide").length;
+          this.maxSlide = this.totalSlides - this.slidesPerView;
+          this.sliderWrapper = document.getElementById("sliderWrapper");
+          this.prevBtn = document.getElementById("prevBtn");
+          this.nextBtn = document.getElementById("nextBtn");
+          this.dotsContainer = document.getElementById("dotsContainer");
 
+          this.init();
+          this.createDots();
+          this.updateNavigation();
 
-        class AchievementsSlider {
-            constructor() {
-                this.currentSlide = 0;
-                this.slidesPerView = this.getSlidesPerView();
-                this.totalSlides = document.querySelectorAll('.slide').length;
-                this.maxSlide = this.totalSlides - this.slidesPerView;
-                this.sliderWrapper = document.getElementById('sliderWrapper');
-                this.prevBtn = document.getElementById('prevBtn');
-                this.nextBtn = document.getElementById('nextBtn');
-                this.dotsContainer = document.getElementById('dotsContainer');
-                
-                this.init();
-                this.createDots();
-                this.updateNavigation();
-                
-                // Handle window resize
-                window.addEventListener('resize', () => {
-                    this.slidesPerView = this.getSlidesPerView();
-                    this.maxSlide = this.totalSlides - this.slidesPerView;
-                    this.currentSlide = Math.min(this.currentSlide, this.maxSlide);
-                    this.updateSliderPosition();
-                    this.updateNavigation();
-                    this.createDots();
-                });
-            }
-
-            getSlidesPerView() {
-                if (window.innerWidth <= 768) return 1;
-                if (window.innerWidth <= 992) return 2;
-                return 3;
-            }
-
-            init() {
-                this.updateSliderPosition();
-            }
-
-            createDots() {
-                const totalDots = this.maxSlide + 1;
-                this.dotsContainer.innerHTML = '';
-                
-                for (let i = 0; i <= this.maxSlide; i++) {
-                    const dot = document.createElement('div');
-                    dot.className = 'dot';
-                    if (i === this.currentSlide) dot.classList.add('active');
-                    dot.addEventListener('click', () => this.goToSlide(i));
-                    this.dotsContainer.appendChild(dot);
-                }
-            }
-
-            updateSliderPosition() {
-                const translateX = -(this.currentSlide * (100 / this.slidesPerView));
-                this.sliderWrapper.style.transform = `translateX(${translateX}%)`;
-            }
-
-            updateNavigation() {
-                this.prevBtn.disabled = this.currentSlide === 0;
-                this.nextBtn.disabled = this.currentSlide >= this.maxSlide;
-                
-                // Update dots
-                const dots = document.querySelectorAll('.dot');
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === this.currentSlide);
-                });
-            }
-
-            moveSlide(direction) {
-                const newSlide = this.currentSlide + direction;
-                
-                if (newSlide >= 0 && newSlide <= this.maxSlide) {
-                    this.currentSlide = newSlide;
-                    this.updateSliderPosition();
-                    this.updateNavigation();
-                }
-            }
-
-            goToSlide(slideIndex) {
-                if (slideIndex >= 0 && slideIndex <= this.maxSlide) {
-                    this.currentSlide = slideIndex;
-                    this.updateSliderPosition();
-                    this.updateNavigation();
-                }
-            }
+          // Handle window resize
+          window.addEventListener("resize", () => {
+            this.slidesPerView = this.getSlidesPerView();
+            this.maxSlide = this.totalSlides - this.slidesPerView;
+            this.currentSlide = Math.min(this.currentSlide, this.maxSlide);
+            this.updateSliderPosition();
+            this.updateNavigation();
+            this.createDots();
+          });
         }
 
-        // Global function for button clicks
-        let slider;
-
-        function moveSlide(direction) {
-            slider.moveSlide(direction);
+        getSlidesPerView() {
+          if (window.innerWidth <= 768) return 1;
+          if (window.innerWidth <= 992) return 2;
+          return 3;
         }
 
-        // Initialize slider when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            slider = new AchievementsSlider();
-        });
+        init() {
+          this.updateSliderPosition();
+        }
 
-        var mediaSwiper = new Swiper(".mediaSwiper", {
+        createDots() {
+          const totalDots = this.maxSlide + 1;
+          this.dotsContainer.innerHTML = "";
+
+          for (let i = 0; i <= this.maxSlide; i++) {
+            const dot = document.createElement("div");
+            dot.className = "dot";
+            if (i === this.currentSlide) dot.classList.add("active");
+            dot.addEventListener("click", () => this.goToSlide(i));
+            this.dotsContainer.appendChild(dot);
+          }
+        }
+
+        updateSliderPosition() {
+          const translateX = -(this.currentSlide * (100 / this.slidesPerView));
+          this.sliderWrapper.style.transform = `translateX(${translateX}%)`;
+        }
+
+        updateNavigation() {
+          this.prevBtn.disabled = this.currentSlide === 0;
+          this.nextBtn.disabled = this.currentSlide >= this.maxSlide;
+
+          // Update dots
+          const dots = document.querySelectorAll(".dot");
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === this.currentSlide);
+          });
+        }
+
+        moveSlide(direction) {
+          const newSlide = this.currentSlide + direction;
+
+          if (newSlide >= 0 && newSlide <= this.maxSlide) {
+            this.currentSlide = newSlide;
+            this.updateSliderPosition();
+            this.updateNavigation();
+          }
+        }
+
+        goToSlide(slideIndex) {
+          if (slideIndex >= 0 && slideIndex <= this.maxSlide) {
+            this.currentSlide = slideIndex;
+            this.updateSliderPosition();
+            this.updateNavigation();
+          }
+        }
+      }
+
+      // Global function for button clicks
+      let slider;
+
+      function moveSlide(direction) {
+        slider.moveSlide(direction);
+      }
+
+      // Initialize slider when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        slider = new AchievementsSlider();
+      });
+
+      var mediaSwiper = new Swiper(".mediaSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        grabCursor: true, // Shows grab cursor on hover
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: ".media-swiper-button-next",
+          prevEl: ".media-swiper-button-prev",
+        },
+        pagination: {
+          el: ".media-swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          992: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1400: {
             slidesPerView: 4,
             spaceBetween: 30,
-            loop: true,
-            grabCursor: true, // Shows grab cursor on hover
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            navigation: {
-                nextEl: ".media-swiper-button-next",
-                prevEl: ".media-swiper-button-prev",
-            },
-            pagination: {
-                el: ".media-swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                576: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 25,
-                },
-                992: {
-                    slidesPerView: 2,
-                    spaceBetween: 25,
-                },
-                1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1400: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-            },
-            // Additional touch/mouse settings for better drag experience
-            touchRatio: 1,
-            touchAngle: 45,
-            simulateTouch: true,
-            allowTouchMove: true,
-            touchStartPreventDefault: false,
+          },
+        },
+        // Additional touch/mouse settings for better drag experience
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        allowTouchMove: true,
+        touchStartPreventDefault: false,
+      });
+
+      // Optional: Add click handlers for play buttons
+      document.querySelectorAll(".play-button-overlay").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.stopPropagation();
+          // Add your video play logic here
+          console.log("Play button clicked");
         });
-
-        // Optional: Add click handlers for play buttons
-        document.querySelectorAll('.play-button-overlay').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.stopPropagation();
-                // Add your video play logic here
-                console.log('Play button clicked');
-            });
-        });
-
-
-  </script>
+      });
+    </script>
 
     <script>
-    function toggleDropdown(anchor) {
+      function toggleDropdown(anchor) {
         if (window.innerWidth > 991) return;
         const currentDropdown = anchor.parentElement;
 
-        const allDropdowns = document.querySelectorAll('li.dropdown');
+        const allDropdowns = document.querySelectorAll("li.dropdown");
 
-        allDropdowns.forEach(dropdown => {
-            if (dropdown === currentDropdown) {
-                dropdown.classList.toggle('open');
-            } else {
-                dropdown.classList.remove('open');
-            }
+        allDropdowns.forEach((dropdown) => {
+          if (dropdown === currentDropdown) {
+            dropdown.classList.toggle("open");
+          } else {
+            dropdown.classList.remove("open");
+          }
         });
-    }
+      }
 
-    var newsSwiper = new Swiper(".news-swiper", {
+      var newsSwiper = new Swiper(".news-swiper", {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: false,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        navigation: {
+          nextEl: "#newsNextBtn",
+          prevEl: "#newsPrevBtn",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          1200: {
             slidesPerView: 6,
             spaceBetween: 20,
-            loop: true,
-            grabCursor: true,
-            centeredSlides: false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            navigation: {
-                nextEl: "#newsNextBtn",
-                prevEl: "#newsPrevBtn",
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                },
-                480: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-                992: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                },
-                1200: {
-                    slidesPerView: 6,
-                    spaceBetween: 20,
-                },
-            },
-            // Smooth drag settings
-            touchRatio: 1,
-            touchAngle: 45,
-            simulateTouch: true,
-            allowTouchMove: true,
-            resistance: true,
-            resistanceRatio: 0.85,
-        });
+          },
+        },
+        // Smooth drag settings
+        touchRatio: 1,
+        touchAngle: 45,
+        simulateTouch: true,
+        allowTouchMove: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+      });
 
-        // Optional: Add click event to logos
-        document.querySelectorAll('.news-logo').forEach(logo => {
-            logo.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('Clicked:', this.alt);
-                // Add your click logic here
-            });
+      // Optional: Add click event to logos
+      document.querySelectorAll(".news-logo").forEach((logo) => {
+        logo.addEventListener("click", function (e) {
+          e.preventDefault();
+          console.log("Clicked:", this.alt);
+          // Add your click logic here
         });
-
+      });
     </script>
 
+    <script>
+      // fetch("navbar.html")
+      //   .then(response => response.text())
+      //   .then(html => {
+      //     document.getElementById("navbar").innerHTML = html;
+      //   })
+      //   .catch(err => console.error("Navbar load failed:", err));
 
- <script>
-    // fetch("navbar.html")
-    //   .then(response => response.text())
-    //   .then(html => {
-    //     document.getElementById("navbar").innerHTML = html;
-    //   })
-    //   .catch(err => console.error("Navbar load failed:", err));
-
-          fetch("footer.html")
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById("footer").innerHTML = html;
-      })
-      .catch(err => console.error("Footer load failed:", err));
-  </script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        })
+        .catch((err) => console.error("Footer load failed:", err));
+    </script>
   </body>
 </html>
