@@ -294,10 +294,7 @@ body {
 
 .content-section h2 span.highlight {
   color: #4f46e5;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+ 
 }
 
 .subtitle {
@@ -384,6 +381,18 @@ body {
   max-width: 400px;
   width: 100%;
 }
+
+.phone-container img {
+  width: 500px;
+}
+
+@media (max-width: 576px) {
+  .phone-container img {
+    width: 100%;
+  }
+}
+
+
 
 .phone-mockup {
   width: 100%;
@@ -605,14 +614,6 @@ body {
   text-align: center;
 }
 
-.center-heading .section-title {
-  font-weight: 500;
-  font-size: 28px;
-  color: #1e1e1e;
-  letter-spacing: 1.75px;
-  line-height: 38px;
-  margin-bottom: 20px;
-}
 
 .center-heading.colored .section-title {
   color: #ffffff;
@@ -1089,7 +1090,7 @@ header
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .header-area .main-nav .nav {
     display: flex !important;
   }
@@ -2504,11 +2505,11 @@ blog
 }
 
 .section-title {
-  font-size: 2.5rem;
   font-weight: 700;
-  color: #2a2a2a;
-  text-align: center;
-  margin-bottom: 50px;
+  line-height: 1.2;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
 }
 
 /*News media slider */
@@ -2654,6 +2655,10 @@ blog
   }
 }
 
+#media {
+  background-color: #e8ebff2f;
+}
+
 /* Media Swiper Container */
 .media-swiper-container {
   margin: 0 70px;
@@ -2692,6 +2697,7 @@ blog
   height: 100%;
   border: none;
   border-radius: 25px;
+  pointer-events: none;
 }
 
 .media-video-container img {
@@ -2707,30 +2713,6 @@ blog
   bottom: 0;
   background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
   z-index: 2;
-}
-
-.play-button-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background: rgba(60, 197, 237, 0.9);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.play-button-overlay::after {
-  content: '▶';
-  color: white;
-  font-size: 20px;
-  margin-left: 3px;
 }
 
 .play-button-overlay:hover {
