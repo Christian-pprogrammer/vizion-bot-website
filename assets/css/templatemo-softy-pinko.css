@@ -250,7 +250,7 @@ body {
 
 
 .section.colored {
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+  background: #f2f2fe;
   min-height: 100vh;
   padding: 80px 0;
   position: relative;
@@ -281,11 +281,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.content-section {
-  flex: 1;
-  max-width: 500px;
 }
 
 .content-section h2 {
@@ -574,8 +569,15 @@ body {
   
   .download-buttons {
       justify-content: center;
+      display: block;
   }
   
+  .download-buttons a {
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+  }
+
   .store-button {
       padding: 10px 20px;
       font-size: 0.9rem;
