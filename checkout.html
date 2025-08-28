@@ -842,7 +842,7 @@
 
                         <div class="checkbox-group">
                             <input type="checkbox" id="agreeTerms" required>
-                            <label for="agreeTerms">I agree to Vizion Bot's <a href="#" style="color: var(--primary-dark); text-decoration: none;">terms and conditions</a> and <a onclick="window.open('/privacy-policy.html')" href="#" style="color: var(--primary-dark); text-decoration: none;">privacy policy</a></label>
+                            <label for="agreeTerms">I agree to Vizion Bot's <a onclick="window.open('/sales-agreement.html')" href="#" style="color: var(--primary-dark); text-decoration: none;">terms and conditions</a> and <a onclick="window.open('/privacy-policy.html')" href="#" style="color: var(--primary-dark); text-decoration: none;">privacy policy</a></label>
                         </div>
 
                         <div class="button-group">
@@ -2638,7 +2638,7 @@ const rwandaDistricts = [
         currency: data?.data?.currency, // or your desired currency
         country: checkoutData.country, // or your desired country
         // payment_options: 'card, ',
-        redirect_url: 'http://127.0.0.1:5500/checkout.html?tab=order-complete',
+        redirect_url: 'https://vizion-bot-website.vercel.app/checkout.html?tab=order-complete',
         customer: {
           email: userEmail,
           name: checkoutData.fullName,
