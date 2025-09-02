@@ -42,6 +42,186 @@ https://templatemo.com/tm-535-softy-pinko
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <style>
+
+        .video-slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 80px;
+        }
+
+        .video-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #ffffff;
+            padding: 20px;
+        }
+
+        .video-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .video-slide {
+            flex: 0 0 100%;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+        }
+
+        .video-slide iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .video-info {
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .video-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            line-height: 1.4;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(45deg, #3CC5ED, #04556e);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .nav-button:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .m-prev-button {
+            left: 10px;
+        }
+
+        .m-next-button {
+            right: 10px;
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #666;
+        }
+
+        .nav-button:disabled:hover {
+            transform: translateY(-50%) scale(1);
+        }
+
+        .m-dots-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .m-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .m-dot.active {
+            background: linear-gradient(45deg, #3CC5ED, #3CC5ED);
+            transform: scale(1.2);
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            .video-slider-container {
+                padding: 0 20px;
+            }
+               .video-track {
+justify-content: flex-start;
+               }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .video-slide {
+                flex: 0 0 calc(33.333% - 14px);
+            }
+            
+            .video-slide iframe {
+                height: 200px;
+            }
+
+            .slider-header h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .video-slide iframe {
+                height: 220px;
+            }
+        }
+
+        /* Loading animation */
+        .video-slide.loading::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: loading 1.5s infinite;
+            z-index: 1;
+        }
+
+        @keyframes loading {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+
   </head>
 
   <body>
@@ -66,7 +246,7 @@ https://templatemo.com/tm-535-softy-pinko
 
                 <li class="dropdown">
 
-                       <a href="#" onclick="toggleDropdown(this)">
+                       <a href="javascript:void(0);"onclick="toggleDropdown(this)">
                                     <span onclick="window.location.href='./products.html'">Products</span> <i class="fas fa-caret-down"></i>
                                 </a>
 
@@ -387,87 +567,25 @@ https://templatemo.com/tm-535-softy-pinko
           </div>
         </div>
 
-        <div class="news-media-container">
-          <div class="swiper news-swiper">
-            <div class="swiper-wrapper">
-              <!-- CBS News -->
-              <div class="swiper-slide">
-                <div class="news-slide">
-               <h1 style="font-weight: 900 !important;font-size: 25px;">At Isango</h1>
-                </div>
-              </div>
-
-               <!-- <div class="swiper-slide">
-                <div class="news-slide">
-                  <img
-                    src="https://maps.prodafrica.com/wp-content/uploads/2025/06/rba_logo.jpg"
-                    alt="CBS News"
-                    class="news-logo"
-                  />
-                </div>
-              </div> -->
-
-               <div class="swiper-slide">
-                <div class="news-slide">
-               <h1 style="font-weight: 900 !important;font-size: 25px;">At Define</h1>
-                  <!-- <img
-                    src="https://yt3.googleusercontent.com/jKs77EJYUB6WUI9OREAoa_Pq8pD9FPJPe8yQYyfOYuKMPrc1a3SzNfSwFM8A009u0ZUKi77t=s900-c-k-c0x00ffffff-no-rj"
-                    alt="CBS News"
-                    class="news-logo"
-                  /> -->
-                </div>
-              </div>
-
+    <div class="video-slider-container">
+        <div class="video-slider">
+            <div class="video-track" id="videoTrack">
+                <!-- Video slides will be generated by JavaScript -->
             </div>
-          </div>
 
-          <!-- Navigation Arrows -->
-          <button class="news-nav-btn news-nav-prev" id="newsPrevBtn">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="news-nav-btn news-nav-next" id="newsNextBtn">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+            <button class="nav-button m-prev-button" id="MPrevBtn" aria-label="Previous videos">
+                ‹
+            </button>
+            <button class="nav-button m-next-button" id="mNextBtn" aria-label="Next videos">
+                ›
+            </button>
         </div>
 
-        <!-- Swiper Container -->
-        <div class="media-swiper-container">
-          <div class="mediaSwiper">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <div class="media-post-thumb">
-                  <div class="media-video-container">
-                    <!-- <iframe
-                      src="https://www.youtube.com/watch?v=p850KDFsw6w"
-                      title="CAA Safety Standards Overview"
-                      allowfullscreen
-                      loading="lazy"
-                    >
-                    </iframe> -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p850KDFsw6w?si=GtKLz6UgMwfAzGGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- <div class="media-title">
-                      <h3>CAA Safety Standards Overview</h3>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <div class="media-post-thumb">
-                  <div class="media-video-container">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/A4KOpe-Vj5c?si=gRhsQ5ZroGAstjhP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-
-            
-            </div>
-          </div>
+        <div class="m-dots-container" id="mDotsContainer">
+            <!-- Dots will be generated by JavaScript -->
         </div>
+    </div>
+
       </div>
     </section>
 
@@ -668,7 +786,7 @@ https://templatemo.com/tm-535-softy-pinko
           <div class="col-lg-8 col-md-6 col-sm-12">
             <div class="contact-form">
               <form id="contact" action="" method="get">
-                <div class="row">
+                <div class="row" style="padding: 0px !important;">
                   <div class="col-lg-6 col-md-12 col-sm-12">
                     <fieldset>
                       <input
@@ -1132,6 +1250,182 @@ https://templatemo.com/tm-535-softy-pinko
           document.getElementById("footer").innerHTML = html;
         })
         .catch((err) => console.error("Footer load failed:", err));
+    </script>
+
+      <script>
+        class VideoSlider {
+            constructor() {
+                // Add your YouTube video IDs here - Only 2 videos for now
+                this.videos = [
+                    {
+                        id: 'dQw4w9WgXcQ',
+                        title: 'At Isango',
+                        description: `Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye`,
+                        src: 'https://www.youtube.com/embed/p850KDFsw6w?si=GtKLz6UgMwfAzGGP'
+                    },
+                    {
+                        id: 'M7lc1UVf-VE',
+                        title: 'At Define', 
+                        description: `Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye`,
+                        src: "https://www.youtube.com/embed/A4KOpe-Vj5c?si=gRhsQ5ZroGAstjhP"
+                    }
+                ];
+
+                this.currentIndex = 0;
+                this.isMobile = window.innerWidth < 768;
+                this.videosPerView = this.isMobile ? 1 : 3;
+                this.maxIndex = Math.max(0, this.videos.length - this.videosPerView);
+
+                this.initElements();
+                this.createVideoSlides();
+                this.createDots();
+                this.bindEvents();
+                this.updateSlider();
+            }
+
+            initElements() {
+                this.videoTrack = document.getElementById('videoTrack');
+                this.MPrevBtn = document.getElementById('MPrevBtn');
+                this.mNextBtn = document.getElementById('mNextBtn');
+                this.mDotsContainer = document.getElementById('mDotsContainer');
+            }
+
+            createVideoSlides() {
+                this.videoTrack.innerHTML = '';
+                
+                this.videos.forEach((video, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'video-slide';
+                    slide.innerHTML = `
+                        <iframe 
+                            src="${video.src}"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            loading="lazy"
+                            title="${video.title}">
+                        </iframe>
+                        <div class="video-info">
+                            <div class="video-title">${video.title}</div>
+                            <div class="video-description">${video.description}</div>
+                        </div>
+                    `;
+                    this.videoTrack.appendChild(slide);
+                });
+            }
+
+            createDots() {
+                this.mDotsContainer.innerHTML = '';
+                const numDots = this.videos.length; // One dot per video
+                
+                for (let i = 0; i < numDots; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'm-dot';
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.mDotsContainer.appendChild(dot);
+                }
+            }
+
+            updateSlider() {
+                const translateX = -(this.currentIndex * (100 / this.videosPerView));
+                this.videoTrack.style.transform = `translateX(${translateX}%)`;
+
+                // Update navigation buttons
+                this.MPrevBtn.disabled = this.currentIndex === 0;
+                this.mNextBtn.disabled = this.currentIndex >= this.maxIndex;
+
+                // Update dots - one per video
+                const dots = this.mDotsContainer.querySelectorAll('.m-dot');
+                dots.forEach((dot, index) => {
+                    const isVisible = this.isMobile ? 
+                        index === this.currentIndex : 
+                        (index >= this.currentIndex && index < this.currentIndex + this.videosPerView);
+                    dot.classList.toggle('active', isVisible);
+                });
+            }
+
+            goToSlide(index) {
+                if (this.isMobile) {
+                    this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                } else {
+                    // On desktop, adjust to show the clicked video as the first of the 3
+                    this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                }
+                this.updateSlider();
+            }
+
+            nextSlide() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex += this.videosPerView;
+                    this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+                    this.updateSlider();
+                }
+            }
+
+            prevSlide() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex -= this.videosPerView;
+                    this.currentIndex = Math.max(this.currentIndex, 0);
+                    this.updateSlider();
+                }
+            }
+
+            handleResize() {
+                const wasMobile = this.isMobile;
+                this.isMobile = window.innerWidth < 768;
+                this.videosPerView = this.isMobile ? 1 : 3;
+                this.maxIndex = Math.max(0, this.videos.length - this.videosPerView);
+
+                if (wasMobile !== this.isMobile) {
+                    this.currentIndex = 0;
+                    this.createDots();
+                }
+                
+                this.updateSlider();
+            }
+
+            bindEvents() {
+                this.mNextBtn.addEventListener('click', () => this.nextSlide());
+                this.MPrevBtn.addEventListener('click', () => this.prevSlide());
+                
+                window.addEventListener('resize', () => this.handleResize());
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        this.prevSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        this.nextSlide();
+                    }
+                });
+
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+
+                this.videoTrack.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.videoTrack.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize the slider when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new VideoSlider();
+        });
     </script>
   </body>
 </html>

@@ -3552,12 +3552,13 @@ padding-right: 0px !important;
   padding-right: 0px !important;
 }
          .helpcenterpage>.justifycontent2{
-        display: block !important;
+        display: flex !important;
         width: 100%;
             max-width: 100% !important;
             padding-left: 24px !important;
             padding-right: 24px !important;
             margin-bottom: -50px !important;
+            flex-direction: column-reverse !important;
       }
 
       .map-containerin>iframe{
@@ -3568,5 +3569,13 @@ padding-right: 0px !important;
       .map-containerin{
         margin-bottom: 20px !important;
       }
+
+      .footer-bottom{
+        background-color: transparent  !important;
+
+      }
+       .footer-bottom>.container{
+        row-gap: 10px !important;
+       }
 
  }
