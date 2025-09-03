@@ -1657,8 +1657,13 @@ justify-content: flex-start;
             const supported = ['en', 'fr', 'sw', 'rw'];
             
             if (supported.includes(browserLang)) {
+                 document.getElementById("current-language-flag").src = flags.find(f => f.label === saved).url;
+                 document.getElementById(flags.find(f => f.label === saved)?.label).style.backgroundColor = "#f2f2f2";
                 return browserLang;
             }
+
+            document.getElementById("current-language-flag").src = flags.find(f => f.label === 'en').url;
+            document.getElementById(flags.find(f => f.label === 'en')?.label).style.backgroundColor = "#f2f2f2";
             
             return 'en';
         }
