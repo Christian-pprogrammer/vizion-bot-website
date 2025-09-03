@@ -12,8 +12,9 @@
       href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/i18next@25.4.2/dist/umd/i18next.js"></script>
 
-    <title>Vizion bot</title>
+    <title id="site_title">Vizion bot</title>
     <!--
 SOFTY PINKO
 https://templatemo.com/tm-535-softy-pinko
@@ -56,7 +57,7 @@ https://templatemo.com/tm-535-softy-pinko
             position: relative;
             overflow: hidden;
             border-radius: 15px;
-            background: #ffffff;
+            /* background: #ffffff; */
             padding: 20px;
         }
 
@@ -226,7 +227,7 @@ justify-content: flex-start;
 
   <body>
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
+<header class="header-area header-sticky">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -242,47 +243,39 @@ justify-content: flex-start;
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
-                <li><a class="active-page" href="./index.html">Home</a></li>
-
-                <li class="dropdown">
-
-                       <a href="javascript:void(0);"onclick="toggleDropdown(this)">
-                                    <span onclick="window.location.href='./products.html'">Products</span> <i class="fas fa-caret-down"></i>
-                                </a>
-
-                  <ul class="dropdown-menu-div">
-                    <li>
-                      <a href="./ai-digital-walking-stick.html"
-                        >AI Digital walking stick</a
-                      >
-                    </li>
-                    <li>
-                      <a href="./digital-walking-stick.html"
-                        >Digital walking stick</a
-                      >
-                    </li>
-                    <li><a href="./whitecane.html">White cane</a></li>
-                  </ul>
-                </li>
-
-                <li><a href="./about.html">About Us</a></li>
+                <li><a class="active-page" id="nav_home" href="./index.html">Home</a></li>
 
                 <li class="dropdown">
                   <a href="javascript:void(0);" onclick="toggleDropdown(this)">
-                    Partnerships <i class="fas fa-caret-down"></i>
+                    <span onclick="window.location.href='./products.html'" id="nav_products">Products</span> <i class="fas fa-caret-down"></i>
                   </a>
+
                   <ul class="dropdown-menu-div">
                     <li>
-                      <a href="./corporate-partnership.html"
-                        >Corporate partnership</a
-                      >
+                      <a href="./ai-digital-walking-stick.html" id="nav_products_ai_stick">AI Digital walking stick</a>
                     </li>
-                    <li><a href="./rd-partnership.html">R&D partnership</a></li>
+                    <li>
+                      <a href="./digital-walking-stick.html" id="nav_products_digital_stick">Digital walking stick</a>
+                    </li>
+                    <li><a href="./whitecane.html" id="nav_products_white_cane">White cane</a></li>
                   </ul>
                 </li>
 
-                <li><a href="./contactus.html">Help center</a></li>
+                <li><a href="./about.html" id="nav_about">About Us</a></li>
 
+                <li class="dropdown">
+                  <a href="javascript:void(0);" onclick="toggleDropdown(this)">
+                    <span id="nav_partnerships">Partnerships</span> <i class="fas fa-caret-down"></i>
+                  </a>
+                  <ul class="dropdown-menu-div">
+                    <li>
+                      <a href="./corporate-partnership.html" id="nav_partnerships_corporate">Corporate partnership</a>
+                    </li>
+                    <li><a href="./rd-partnership.html" id="nav_partnerships_rd">R&D partnership</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="./contactus.html" id="nav_help_center">Help center</a></li>
                 <li class="dropdown">
                   <a href="javascript:void(0);" onclick="toggleDropdown(this)">
                     <img
@@ -290,13 +283,14 @@ justify-content: flex-start;
                       src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
                       alt="EN"
                       width="20"
+                      id="current-language-flag"
                       height="20"
                     />
                     <i class="fas fa-caret-down"></i>
                   </a>
                   <ul class="dropdown-menu-div">
-                    <li>
-                      <a href="#">
+                    <li id="en">
+                      <a href="javascript:void(0);" onclick="switchLang('en');window.location.reload();">
                         <img
                           class="wpml-ls-flag"
                           src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"
@@ -304,11 +298,12 @@ justify-content: flex-start;
                           width="20"
                           height="20"
                         />
-                        English</a
-                      >
+                        <span id="nav_language_english">English</span></a>
                     </li>
-                    <li>
-                      <a href="#">
+                    <li id="fr">
+                      <a href="javascript:void(0);" onclick="switchLang('fr');setTimeout(() => {
+                        window.location.reload();
+                      }, 500);">
                         <img
                           class="wpml-ls-flag"
                           src="https://cdn.countryflags.com/thumbs/france/flag-800.png"
@@ -316,12 +311,11 @@ justify-content: flex-start;
                           width="20"
                           height="20"
                         />
-                        French</a
-                      >
+                        <span id="nav_language_french">French</span></a>
                     </li>
 
-                    <li>
-                      <a href="#">
+                    <li id="sw">
+                      <a href="javascript:void(0);" onclick="switchLang('sw');window.location.reload();">
                         <img
                           class="wpml-ls-flag"
                           src="https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png"
@@ -329,12 +323,12 @@ justify-content: flex-start;
                           width="20"
                           height="20"
                         />
-                        Swahili
+                        <span id="nav_language_swahili">Swahili</span>
                       </a>
                     </li>
 
-                    <li>
-                      <a href="#">
+                    <li id="rw">
+                      <a href="javascript:void(0);" onclick="switchLang('rw');window.location.reload();">
                         <img
                           class="wpml-ls-flag"
                           src="https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png"
@@ -342,20 +336,18 @@ justify-content: flex-start;
                           width="20"
                           height="20"
                         />
-                        Kinyarwanda</a
-                      >
+                        <span id="nav_language_kinyarwanda">Kinyarwanda</span>
+                      </a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="./checkout.html" class="desktop-order-now-button"
-                    >Order Now</a
-                  >
+                  <a href="./checkout.html" class="desktop-order-now-button" id="nav_order_now">Order Now</a>
                 </li>
               </ul>
 
               <a class="menu-trigger">
-                <span>Menu</span>
+                <span id="menu_trigger">Menu</span>
               </a>
               <!-- ***** Menu End ***** -->
             </nav>
@@ -365,20 +357,20 @@ justify-content: flex-start;
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <!-- ***** Welcome Area Start ***** -->
+<!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area swiper">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide slide1">
           <div class="header-text container">
-            <p class="hero-paragraph slide-header">WE MIND YOUR STEP</p>
-            <p class="hero-paragraph">
+            <p class="hero-paragraph slide-header" id="hero_slide1_title">WE MIND YOUR STEP</p>
+            <p class="hero-paragraph" id="hero_slide1_subtitle">
               We make innovative digital walking sticks <br />that help visually
               impaired people move independently.
             </p>
             <div class="flex">
-              <a href="./checkout.html" class="main-button">Order Now</a>
-              <a href="./products.html" class="main-button">Learn More</a>
+              <a href="./checkout.html" class="main-button" id="hero1_button_order_now">Order Now</a>
+              <a href="./products.html" class="main-button" id="hero_learn_more">Learn More</a>
             </div>
           </div>
         </div>
@@ -386,16 +378,16 @@ justify-content: flex-start;
         <!-- Slide 2 -->
         <div class="swiper-slide slide2">
           <div class="header-text container">
-            <p class="hero-paragraph slide-header">
+            <p class="hero-paragraph slide-header" id="hero_slide2_title">
               Innovation in Accessibility
             </p>
-            <p class="hero-paragraph">
+            <p class="hero-paragraph" id="hero_slide2_subtitle">
               Empowering independence through cutting-edge assistive technology
               and thoughtful design.
             </p>
             <div class="flex">
-              <a href="./checkout.html" class="main-button">Order Now</a>
-              <a href="#blog" class="main-button">Learn More</a>
+              <a href="./checkout.html" class="main-button" id="hero2_button_order_now">Order Now</a>
+              <a href="#blog" class="main-button" id="hero_learn_more">Learn More</a>
             </div>
           </div>
         </div>
@@ -403,16 +395,16 @@ justify-content: flex-start;
         <!-- Slide 3 -->
         <div class="swiper-slide slide3">
           <div class="header-text container">
-            <p class="hero-paragraph slide-header">
-              Engineering Today’s Solutions
+            <p class="hero-paragraph slide-header" id="hero_slide3_title">
+              Engineering Today's Solutions
             </p>
-            <p class="hero-paragraph">
+            <p class="hero-paragraph" id="hero_slide3_subtitle">
               Where technology meets compassion to create life-changing
               experiences for the visually impaired community.
             </p>
             <div class="flex">
-              <a href="./checkout.html" class="main-button">Order Now</a>
-              <a href="#blog" class="main-button">Learn More</a>
+              <a href="./checkout.html" class="main-button" id="hero3_button_order_now">Order Now</a>
+              <a href="#blog" class="main-button" id="hero_learn_more">Learn More</a>
             </div>
           </div>
         </div>
@@ -434,8 +426,8 @@ justify-content: flex-start;
             />
           </div>
           <div class="product-content">
-            <h2>AI Digital Walking Stick</h2>
-            <p>
+            <h2 id="product_ai_title">AI Digital Walking Stick</h2>
+            <p id="product_ai_description">
               The Artificial Intelligent Digital Walking Stick by Vizion Bot is
               a cutting-edge assistive device designed to enhance the
               independence and safety of visually impaired people. Equipped with
@@ -444,10 +436,8 @@ justify-content: flex-start;
               through vibrations and sound.
             </p>
             <div class="product-buttons">
-              <a href="./ai-digital-walking-stick.html" class="product-btn"
-                >Learn More</a
-              >
-              <a href="./checkout.html" class="product-btn secondary">Order now</a>
+              <a href="./ai-digital-walking-stick.html" class="product-btn" id="ai_button_learn_more">Learn More</a>
+              <a href="./checkout.html" class="product-btn secondary" id="ai_button_order_now">Order now</a>
             </div>
           </div>
         </div>
@@ -464,8 +454,8 @@ justify-content: flex-start;
             />
           </div>
           <div class="product-content">
-            <h2>Digital Walking Stick</h2>
-            <p>
+            <h2 id="product_digital_title">Digital Walking Stick</h2>
+            <p id="product_digital_description">
               The digital walking stick is an innovative assistive device
               designed for visually impaired people. It helps users navigate
               safely by scanning their surroundings and detecting obstacles in
@@ -474,10 +464,8 @@ justify-content: flex-start;
               with appropriate assistance.
             </p>
             <div class="product-buttons">
-              <a href="./digital-walking-stick.html" class="product-btn"
-                >Learn More</a
-              >
-              <a href="./checkout.html" class="product-btn secondary">Order now</a>
+              <a href="./digital-walking-stick.html" class="product-btn" id="d_button_learn_more">Learn More</a>
+              <a href="./checkout.html" class="product-btn secondary" id="d_button_order_now">Order now</a>
             </div>
           </div>
         </div>
@@ -494,16 +482,16 @@ justify-content: flex-start;
             />
           </div>
           <div class="product-content">
-            <h2>Accessory - White Cane</h2>
-            <p>
+            <h2 id="product_white_cane_title">Accessory - White Cane</h2>
+            <p id="product_white_cane_description">
               The WHITE CANE is a modern, non-digital assistive walking stick
               designed for visually impaired individuals. While it doesn't
               include electronic features, it offers a reliable, ergonomic, and
               highly visible tool to help users navigate safely.
             </p>
             <div class="product-buttons">
-              <a href="./whitecane.html" class="product-btn">Learn More</a>
-              <a href="./checkout.html" class="product-btn secondary">Order now</a>
+              <a href="./whitecane.html" class="product-btn" id="w_button_learn_more">Learn More</a>
+              <a href="./checkout.html" class="product-btn secondary" id="w_button_order_now">Order now</a>
             </div>
           </div>
         </div>
@@ -514,7 +502,7 @@ justify-content: flex-start;
         <div class="container productappcont-cont">
             <div class="productappcont">
                 <div class="content-section">
-                    <h2>
+                    <h2 id="app_section_title">
                         Download the <span class="highlight" style="color: #3EC6EC;">Vizion Bot</span> App on Android and connect your AI Digital Walking Stick to enjoy all its smart features.
                     </h2>
                     
@@ -561,7 +549,7 @@ justify-content: flex-start;
           <div class="col-lg-12">
             <div class="center-heading">
               <h2 class="section-title">
-                <span style="color: #3EC6EC;">Vizion Bot in the Media</span>
+                <span style="color: #3EC6EC;" id="media_section_title">Vizion Bot in the Media</span>
               </h2>
             </div>
           </div>
@@ -602,7 +590,7 @@ justify-content: flex-start;
           <div class="col-lg-12">
             <div class="center-heading">
               <h2 class="section-title">
-                <span style="color: #3EC6EC;">Vizion Bot’s Recognition</span>
+                <span style="color: #3EC6EC;" id="recognition_section_title">Vizion Bot's Recognition</span>
               </h2>
             </div>
           </div>
@@ -623,9 +611,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Certificate | Ministry of Education</a>
+                    <a href="#" id="certificate_ministry">Certificate | Ministry of Education</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -641,9 +629,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Certificate | Ministry of Education</a>
+                    <a href="#" id="certificate_ministry">Certificate | Ministry of Education</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -659,9 +647,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Certificate | Ministry of Education</a>
+                    <a href="#" id="certificate_ministry">Certificate | Ministry of Education</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -677,9 +665,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">INNOVATE4DISABILITY Hackathon</a>
+                    <a href="#" id="certificate_hackathon">INNOVATE4DISABILITY Hackathon</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -696,9 +684,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Excellence Award</a>
+                    <a href="#" id="certificate_excellence">Excellence Award</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -714,9 +702,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Innovation Prize</a>
+                    <a href="#" id="certificate_innovation">Innovation Prize</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -732,9 +720,9 @@ justify-content: flex-start;
                 ></div>
                 <!-- <div class="blog-content">
                   <h3>
-                    <a href="#">Leadership Recognition</a>
+                    <a href="#" id="certificate_leadership">Leadership Recognition</a>
                   </h3>
-                  <a href="#" class="main-button">Read More</a>
+                  <a href="#" class="main-button" id="button_read_more">Read More</a>
                 </div> -->
               </div>
             </div>
@@ -763,7 +751,7 @@ justify-content: flex-start;
         <div class="row">
           <div class="col-lg-12">
             <div class="center-heading py-2">
-              <h2 class="section-title">Get In Touch</h2>
+              <h2 class="section-title" id="contact_section_title">Get In Touch</h2>
             </div>
           </div>
         </div>
@@ -772,12 +760,12 @@ justify-content: flex-start;
         <div class="row">
           <!-- ***** Contact Text Start ***** -->
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <h5 class="margin-bottom-30">Our Office Address:</h5>
+            <h5 class="margin-bottom-30" id="contact_office_address">Our Office Address:</h5>
             <div class="contact-text">
-                                  <p><i class="fa-solid fa-location-dot"></i><a style="color: #333;" href="https://maps.app.goo.gl/ZsE7F5ySnNc7oFmX8">Kigali Special Economic Zone, Phase II, Kigali, Rwanda</a></p>
-                        <p><i class="fa-solid fa-phone"></i><a style="color: #333;" href="tel:+250788545299">(+250) 788 545 299</a></p>
-                        <p><i class="fa-solid fa-envelope"></i><a style="color: #333;" href="mailto:vizionbot@gmail.com">vizionbot@gmail.com</a></p>
-                        <p><i class="fas fa-globe-americas"></i><a style="color: #333;" href="https://www.vizionbot.org/">www.vizionbot.org</a></p>
+                                  <p><i class="fa-solid fa-location-dot"></i><a style="color: #333;" href="https://maps.app.goo.gl/ZsE7F5ySnNc7oFmX8" id="contact_address">Kigali Special Economic Zone, Phase II, Kigali, Rwanda</a></p>
+                        <p><i class="fa-solid fa-phone"></i><a style="color: #333;" href="tel:+250788545299" id="contact_phone">(+250) 788 545 299</a></p>
+                        <p><i class="fa-solid fa-envelope"></i><a style="color: #333;" href="mailto:vizionbot@gmail.com" id="contact_email">vizionbot@gmail.com</a></p>
+                        <p><i class="fas fa-globe-americas"></i><a style="color: #333;" href="https://www.vizionbot.org/" id="contact_website">www.vizionbot.org</a></p>
             </div>
           </div>
           <!-- ***** Contact Text End ***** -->
@@ -793,7 +781,7 @@ justify-content: flex-start;
                         name="first_name"
                         type="text"
                         class="form-control"
-                        id="first_name"
+                        id="form_first_name"
                         placeholder="First Name"
                         required=""
                       />
@@ -805,7 +793,7 @@ justify-content: flex-start;
                         name="last_name"
                         type="text"
                         class="form-control"
-                        id="last_name"
+                        id="form_last_name"
                         placeholder="Last Name"
                         required=""
                       />
@@ -818,7 +806,7 @@ justify-content: flex-start;
                         name="email"
                         type="text"
                         class="form-control"
-                        id="email"
+                        id="form_email"
                         placeholder="Email"
                         required=""
                       />
@@ -831,7 +819,7 @@ justify-content: flex-start;
                         name="subject"
                         type="text"
                         class="form-control"
-                        id="subject"
+                        id="form_subject"
                         placeholder="Subject"
                         required=""
                       />
@@ -844,7 +832,7 @@ justify-content: flex-start;
                         name="message"
                         rows="6"
                         class="form-control"
-                        id="message"
+                        id="form_message"
                         placeholder="Write to us"
                         required=""
                       ></textarea>
@@ -854,10 +842,10 @@ justify-content: flex-start;
                     <fieldset>
                       <button
                         type="submit"
-                        id="form-submit"
+                        id="form_form-submit"
                         class="main-button submitbtnsss"
                       >
-                        Send Message
+                        <span id="form_submit">Send Message</span>
                       </button>
                     </fieldset>
                   </div>
@@ -1237,17 +1225,11 @@ justify-content: flex-start;
     </script>
 
     <script>
-      // fetch("navbar.html")
-      //   .then(response => response.text())
-      //   .then(html => {
-      //     document.getElementById("navbar").innerHTML = html;
-      //   })
-      //   .catch(err => console.error("Navbar load failed:", err));
-
       fetch("footer.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("footer").innerHTML = html;
+          updateContent()
         })
         .catch((err) => console.error("Footer load failed:", err));
     </script>
@@ -1306,7 +1288,7 @@ justify-content: flex-start;
                             title="${video.title}">
                         </iframe>
                         <div class="video-info">
-                            <div class="video-title">${video.title}</div>
+                            <div class="video-title" id="${index==0? 'video_title_1' : 'video_title_2'}">${video.title}</div>
                             <div class="video-description">${video.description}</div>
                         </div>
                     `;
@@ -1427,5 +1409,394 @@ justify-content: flex-start;
             new VideoSlider();
         });
     </script>
+
+
+<script>
+        const translations = {
+            en: {
+                translation: {
+                  "site_title": "Vizion bot",
+  "nav_home": "Home",
+  "nav_products": "Products",
+  "nav_products_ai_stick": "AI Digital walking stick",
+  "nav_products_digital_stick": "Digital walking stick",
+  "nav_products_white_cane": "White cane",
+  "nav_about": "About Us",
+  "nav_partnerships": "Partnerships",
+  "nav_partnerships_corporate": "Corporate partnership",
+  "nav_partnerships_rd": "R&D partnership",
+  "nav_help_center": "Help center",
+  "nav_order_now": "Order Now",
+  "nav_language_english": "English",
+  "nav_language_french": "French",
+  "nav_language_swahili": "Swahili",
+  "nav_language_kinyarwanda": "Kinyarwanda",
+  
+  "hero_slide1_title": "WE MIND YOUR STEP",
+  "hero_slide1_subtitle": "We make innovative digital walking sticks that help visually impaired people move independently.",
+  "hero_slide2_title": "Innovation in Accessibility",
+  "hero_slide2_subtitle": "Empowering independence through cutting-edge assistive technology and thoughtful design.",
+  "hero_slide3_title": "Engineering Today's Solutions",
+  "hero_slide3_subtitle": "Where technology meets compassion to create life-changing experiences for the visually impaired community.",
+  "hero_learn_more": "Learn More",
+  
+  "product_ai_title": "AI Digital Walking Stick",
+  "product_ai_description": "The Artificial Intelligent Digital Walking Stick by Vizion Bot is a cutting-edge assistive device designed to enhance the independence and safety of visually impaired people. Equipped with advanced sensors and AI technology, it scans the surroundings to detect both ground-level and overhead obstacles, alerting users through vibrations and sound.",
+  
+  "product_digital_title": "Digital Walking Stick",
+  "product_digital_description": "The digital walking stick is an innovative assistive device designed for visually impaired people. It helps users navigate safely by scanning their surroundings and detecting obstacles in real time. Additionally, it serves as a signal to others, making it easier to recognize visually impaired people and provide them with appropriate assistance.",
+  
+  "product_white_cane_title": "Accessory - White Cane",
+  "product_white_cane_description": "The WHITE CANE is a modern, non-digital assistive walking stick designed for visually impaired individuals. While it doesn't include electronic features, it offers a reliable, ergonomic, and highly visible tool to help users navigate safely.",
+  
+  "app_section_title": "Download the Vizion Bot App on Android and connect your AI Digital Walking Stick to enjoy all its smart features.",
+  
+  "media_section_title": "Vizion Bot in the Media",
+  
+  "recognition_section_title": "Vizion Bot's Recognition",
+  
+  "video_title_1": "At Isango",
+  "video_description_1": "Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye",
+  "video_title_2": "At Define",
+  "video_description_2": "Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye",
+  
+  "contact_section_title": "Get In Touch",
+  "contact_office_address": "Our Office Address:",
+  "contact_address": "Kigali Special Economic Zone, Phase II, Kigali, Rwanda",
+  "contact_phone": "(+250) 788 545 299",
+  "contact_email": "vizionbot@gmail.com",
+  "contact_website": "www.vizionbot.org",
+  
+  "form_first_name": "First Name",
+  "form_last_name": "Last Name",
+  "form_email": "Email",
+  "form_subject": "Subject",
+  "form_message": "Write to us",
+  "form_submit": "Send Message",
+  
+  "button_learn_more": "Learn More",
+  "button_order_now": "Order now",
+  "button_read_more": "Read More",
+  
+  "certificate_ministry": "Certificate | Ministry of Education",
+  "certificate_hackathon": "INNOVATE4DISABILITY Hackathon",
+  "certificate_excellence": "Excellence Award",
+  "certificate_innovation": "Innovation Prize",
+  "certificate_leadership": "Leadership Recognition",
+  
+  "aria_previous_videos": "Previous videos",
+  "aria_next_videos": "Next videos",
+  
+  "menu_trigger": "Menu",
+                      "footer_subscribe_title": "Subscribe",
+                    "footer_subscribe_description": "Be the first to know about our product updates and news",
+                    "footer_email_placeholder": "Enter your email",
+                    "footer_download_app": "Download Our App",
+                    "footer_quick_links": "Quick Links",
+                    "footer_about_us": "About Us",
+                    "footer_contact_us": "Contact Us",
+                    "footer_our_products": "Our Products",
+                    "footer_products_title": "Our Products",
+                    "footer_ai_stick": "AI digital walking stick",
+                    "footer_digital_stick": "Digital walking stick",
+                    "footer_white_cane": "White cane",
+                    "footer_location": "Our Location",
+                    "footer_copyright": "© 2025 Vizion Bot Ltd. All Rights Reserved.",
+                    "footer_privacy_policy": "Privacy policy"
+                }
+            },
+            fr: {
+                translation: {
+  "site_title": "Vizion bot",
+  "nav_home": "Accueil",
+  "nav_products": "Produits",
+  "nav_products_ai_stick": "Canne numérique IA",
+  "nav_products_digital_stick": "Canne numérique",
+  "nav_products_white_cane": "Canne blanche",
+  "nav_about": "À propos de nous",
+  "nav_partnerships": "Partenariats",
+  "nav_partnerships_corporate": "Partenariat d'entreprise",
+  "nav_partnerships_rd": "Partenariat R&D",
+  "nav_help_center": "Centre d'aide",
+  "nav_order_now": "Commander maintenant",
+  "nav_language_english": "Anglais",
+  "nav_language_french": "Français",
+  "nav_language_swahili": "Swahili",
+  "nav_language_kinyarwanda": "Kinyarwanda",
+  
+  "hero_slide1_title": "NOUS VEILLONS SUR VOS PAS",
+  "hero_slide1_subtitle": "Nous fabriquons des cannes numériques innovantes qui aident les personnes malvoyantes à se déplacer de manière indépendante.",
+  "hero_slide2_title": "Innovation en Accessibilité",
+  "hero_slide2_subtitle": "Favoriser l'indépendance grâce à une technologie d'assistance de pointe et une conception réfléchie.",
+  "hero_slide3_title": "Concevoir les Solutions d'Aujourd'hui",
+  "hero_slide3_subtitle": "Où la technologie rencontre la compassion pour créer des expériences qui changent la vie de la communauté des malvoyants.",
+  "hero_learn_more": "En savoir plus",
+  
+  "product_ai_title": "Canne Numérique IA",
+  "product_ai_description": "La Canne Numérique à Intelligence Artificielle de Vizion Bot est un dispositif d'assistance de pointe conçu pour améliorer l'indépendance et la sécurité des personnes malvoyantes. Équipée de capteurs avancés et de technologie IA, elle scanne l'environnement pour détecter les obstacles au niveau du sol et en hauteur, alertant les utilisateurs par des vibrations et des sons.",
+  
+  "product_digital_title": "Canne Numérique",
+  "product_digital_description": "La canne numérique est un dispositif d'assistance innovant conçu pour les personnes malvoyantes. Elle aide les utilisateurs à naviguer en toute sécurité en scannant leur environnement et en détectant les obstacles en temps réel. De plus, elle sert de signal aux autres, facilitant la reconnaissance des personnes malvoyantes et leur offrant une assistance appropriée.",
+  
+  "product_white_cane_title": "Accessoire - Canne Blanche",
+  "product_white_cane_description": "La CANNE BLANCHE est une canne d'assistance moderne et non numérique conçue pour les personnes malvoyantes. Bien qu'elle n'inclue pas de fonctionnalités électroniques, elle offre un outil fiable, ergonomique et très visible pour aider les utilisateurs à naviguer en toute sécurité.",
+  
+  "app_section_title": "Téléchargez l'application Vizion Bot sur Android et connectez votre Canne Numérique IA pour profiter de toutes ses fonctionnalités intelligentes.",
+  
+  "media_section_title": "Vizion Bot dans les Médias",
+  
+  "recognition_section_title": "Reconnaissance de Vizion Bot",
+  
+  "video_title_1": "À Isango",
+  "video_description_1": "Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye",
+  "video_title_2": "À Define",
+  "video_description_2": "Inkoni yifashishwa n'abafite ubumuga bwo kutabona | Adrien Biziyaremye",
+  
+  "contact_section_title": "Contactez-nous",
+  "contact_office_address": "Adresse de notre bureau :",
+  "contact_address": "Zone Économique Spéciale de Kigali, Phase II, Kigali, Rwanda",
+  "contact_phone": "(+250) 788 545 299",
+  "contact_email": "vizionbot@gmail.com",
+  "contact_website": "www.vizionbot.org",
+  
+  "form_first_name": "Prénom",
+  "form_last_name": "Nom de famille",
+  "form_email": "Email",
+  "form_subject": "Sujet",
+  "form_message": "Écrivez-nous",
+  "form_submit": "Envoyer le message",
+  
+  "button_learn_more": "En savoir plus",
+  "button_order_now": "Commander maintenant",
+  "button_read_more": "Lire la suite",
+  
+  "certificate_ministry": "Certificat | Ministère de l'Éducation",
+  "certificate_hackathon": "Hackathon INNOVATE4DISABILITY",
+  "certificate_excellence": "Prix d'Excellence",
+  "certificate_innovation": "Prix de l'Innovation",
+  "certificate_leadership": "Reconnaissance du Leadership",
+  
+  "aria_previous_videos": "Vidéos précédentes",
+  "aria_next_videos": "Vidéos suivantes",
+  
+  "menu_trigger": "Menu",
+                      "footer_subscribe_title": "S'abonner",
+                    "footer_subscribe_description": "Soyez le premier à connaître nos mises à jour de produits et nos actualités",
+                    "footer_email_placeholder": "Entrez votre email",
+                    "footer_download_app": "Téléchargez Notre App",
+                    "footer_quick_links": "Liens Rapides",
+                    "footer_about_us": "À propos de nous",
+                    "footer_contact_us": "Contactez-nous",
+                    "footer_our_products": "Nos Produits",
+                    "footer_products_title": "Nos Produits",
+                    "footer_ai_stick": "Canne numérique IA",
+                    "footer_digital_stick": "Canne numérique",
+                    "footer_white_cane": "Canne blanche",
+                    "footer_location": "Notre Localisation",
+                    "footer_copyright": "© 2025 Vizion Bot Ltd. Tous droits réservés.",
+                    "footer_privacy_policy": "Politique de confidentialité"
+}
+            },
+              sw: {
+                translation: {
+                    "footer_subscribe_title": "Jisajili",
+                    "footer_subscribe_description": "Kuwa wa kwanza kujua kuhusu masasisho ya bidhaa zetu na habari",
+                    "footer_email_placeholder": "Ingiza barua pepe yako",
+                    "footer_download_app": "Pakua Programu Yetu",
+                    "footer_quick_links": "Viungo vya Haraka",
+                    "footer_about_us": "Kuhusu Sisi",
+                    "footer_contact_us": "Wasiliana Nasi",
+                    "footer_our_products": "Bidhaa Zetu",
+                    "footer_products_title": "Bidhaa Zetu",
+                    "footer_ai_stick": "Fimbo ya dijiti ya AI",
+                    "footer_digital_stick": "Fimbo ya dijiti",
+                    "footer_white_cane": "Fimbo nyeupe",
+                    "footer_location": "Mahali Petu",
+                    "footer_copyright": "© 2025 Vizion Bot Ltd. Haki zote zimehifadhiwa.",
+                    "footer_privacy_policy": "Sera ya faragha"
+                }
+            },
+            rw: {
+                translation: {
+                    "footer_subscribe_title": "Kwiyandikisha",
+                    "footer_subscribe_description": "Banza kumenya amakuru mashya y'ibicuruzwa byacu n'amakuru",
+                    "footer_email_placeholder": "Shyiramo imeri yawe",
+                    "footer_download_app": "Kuramo Porogaramu Yacu",
+                    "footer_quick_links": "Inyungu z'Ubwihuse",
+                    "footer_about_us": "Abo turibo",
+                    "footer_contact_us": "Twandikire",
+                    "footer_our_products": "Ibicuruzwa Byacu",
+                    "footer_products_title": "Ibicuruzwa Byacu",
+                    "footer_ai_stick": "Inkoni ya AI ya digitale",
+                    "footer_digital_stick": "Inkoni ya digitale",
+                    "footer_white_cane": "Inkoni yera",
+                    "footer_location": "Aho duherereye",
+                    "footer_copyright": "© 2025 Vizion Bot Ltd. Uburenganzira bwose buhagarikijwe.",
+                    "footer_privacy_policy": "Amategeko"
+                }
+            }
+        };
+
+        function getUserLanguage() {
+
+          const flags = [
+{label: "en", url: "https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png"},
+{label: "fr", url: "https://cdn.countryflags.com/thumbs/france/flag-800.png"},
+{label: "sw", url: "https://www.countryflags.com/wp-content/uploads/kenya-flag-png-large.png"},
+{label: "rw", url: "https://www.countryflags.com/wp-content/uploads/rwanda-flag-png-large.png"},
+]
+
+            const saved = localStorage.getItem('userLanguage');
+            if (saved){
+               document.getElementById("current-language-flag").src = flags.find(f => f.label === saved).url;
+               document.getElementById(flags.find(f => f.label === saved)?.label).style.backgroundColor = "#f2f2f2";
+               return saved;
+            }
+            
+            const browserLang = navigator.language.slice(0, 2);
+            const supported = ['en', 'fr', 'sw', 'rw'];
+            
+            if (supported.includes(browserLang)) {
+                return browserLang;
+            }
+            
+            return 'en';
+        }
+
+        const currentLang = getUserLanguage();
+
+                i18next.init({
+            lng: currentLang,
+            resources: translations
+        }).then(() => {
+            updateContent();
+        });
+
+         function updateContent() {
+
+    // Navigation elements
+    document.getElementById('site_title').textContent = i18next.t('site_title');
+
+    document.getElementById('nav_home').textContent = i18next.t('nav_home');
+    document.getElementById('nav_products').textContent = i18next.t('nav_products');
+    document.getElementById('nav_products_ai_stick').textContent = i18next.t('nav_products_ai_stick');
+    document.getElementById('nav_products_digital_stick').textContent = i18next.t('nav_products_digital_stick');
+    document.getElementById('nav_products_white_cane').textContent = i18next.t('nav_products_white_cane');
+    document.getElementById('nav_about').textContent = i18next.t('nav_about');
+    document.getElementById('nav_partnerships').textContent = i18next.t('nav_partnerships');
+    document.getElementById('nav_partnerships_corporate').textContent = i18next.t('nav_partnerships_corporate');
+    document.getElementById('nav_partnerships_rd').textContent = i18next.t('nav_partnerships_rd');
+    document.getElementById('nav_help_center').textContent = i18next.t('nav_help_center');
+    document.getElementById('nav_order_now').textContent = i18next.t('nav_order_now');
+    document.getElementById('nav_language_english').textContent = i18next.t('nav_language_english');
+    document.getElementById('nav_language_french').textContent = i18next.t('nav_language_french');
+    document.getElementById('nav_language_swahili').textContent = i18next.t('nav_language_swahili');
+    document.getElementById('nav_language_kinyarwanda').textContent = i18next.t('nav_language_kinyarwanda');
+
+    // Hero section
+    document.getElementById('hero_slide1_title').textContent = i18next.t('hero_slide1_title');
+    document.getElementById('hero_slide1_subtitle').textContent = i18next.t('hero_slide1_subtitle');
+    document.getElementById('hero_slide2_title').textContent = i18next.t('hero_slide2_title');
+    document.getElementById('hero_slide2_subtitle').textContent = i18next.t('hero_slide2_subtitle');
+    document.getElementById('hero_slide3_title').textContent = i18next.t('hero_slide3_title');
+    document.getElementById('hero_slide3_subtitle').textContent = i18next.t('hero_slide3_subtitle');
+    document.getElementById('hero_learn_more').textContent = i18next.t('hero_learn_more');
+
+    // Product sections
+    document.getElementById('product_ai_title').textContent = i18next.t('product_ai_title');
+    document.getElementById('product_ai_description').textContent = i18next.t('product_ai_description');
+    document.getElementById('product_digital_title').textContent = i18next.t('product_digital_title');
+    document.getElementById('product_digital_description').textContent = i18next.t('product_digital_description');
+    document.getElementById('product_white_cane_title').textContent = i18next.t('product_white_cane_title');
+    document.getElementById('product_white_cane_description').textContent = i18next.t('product_white_cane_description');
+
+    // App section
+    document.getElementById('app_section_title').textContent = i18next.t('app_section_title');
+
+    // Media section
+    document.getElementById('media_section_title').textContent = i18next.t('media_section_title');
+
+    // Recognition section
+    document.getElementById('recognition_section_title').textContent = i18next.t('recognition_section_title');
+
+    // Video content
+    document.getElementById('video_title_1').textContent = i18next.t('video_title_1');
+    // document.getElementById('video_description_1').textContent = i18next.t('video_description_1');
+    document.getElementById('video_title_2').textContent = i18next.t('video_title_2');
+    // document.getElementById('video_description_2').textContent = i18next.t('video_description_2');
+
+    // Contact section
+    document.getElementById('contact_section_title').textContent = i18next.t('contact_section_title');
+    document.getElementById('contact_office_address').textContent = i18next.t('contact_office_address');
+    document.getElementById('contact_address').textContent = i18next.t('contact_address');
+    document.getElementById('contact_phone').textContent = i18next.t('contact_phone');
+    document.getElementById('contact_email').textContent = i18next.t('contact_email');
+    document.getElementById('contact_website').textContent = i18next.t('contact_website');
+
+    // Form elements
+    document.getElementById('form_first_name').placeholder = i18next.t('form_first_name');
+    document.getElementById('form_last_name').placeholder = i18next.t('form_last_name');
+    document.getElementById('form_email').placeholder = i18next.t('form_email');
+    document.getElementById('form_subject').placeholder = i18next.t('form_subject');
+    document.getElementById('form_message').placeholder = i18next.t('form_message');
+    document.getElementById('form_submit').textContent = i18next.t('form_submit');
+
+    // Buttons
+    document.getElementById('ai_button_learn_more').textContent = i18next.t('button_learn_more');
+    document.getElementById('d_button_learn_more').textContent = i18next.t('button_learn_more')
+    document.getElementById('w_button_learn_more').textContent = i18next.t('button_learn_more');;
+
+    document.getElementById('ai_button_order_now').textContent = i18next.t('button_order_now');
+    document.getElementById('d_button_order_now').textContent = i18next.t('button_order_now');
+    document.getElementById('w_button_order_now').textContent = i18next.t('button_order_now');
+    document.getElementById('hero1_button_order_now').textContent = i18next.t('button_order_now');
+    document.getElementById('hero2_button_order_now').textContent = i18next.t('button_order_now');
+    document.getElementById('hero3_button_order_now').textContent = i18next.t('button_order_now');
+
+    // Certificates
+    // document.getElementById('certificate_ministry').textContent = i18next.t('certificate_ministry');
+    // document.getElementById('certificate_hackathon').textContent = i18next.t('certificate_hackathon');
+    // document.getElementById('certificate_excellence').textContent = i18next.t('certificate_excellence');
+    // document.getElementById('certificate_innovation').textContent = i18next.t('certificate_innovation');
+    // document.getElementById('certificate_leadership').textContent = i18next.t('certificate_leadership');
+    // Accessibility labels
+    // document.getElementById('aria_previous_videos').setAttribute('aria-label', i18next.t('aria_previous_videos'));
+    // document.getElementById('aria_next_videos').setAttribute('aria-label', i18next.t('aria_next_videos'));
+
+    // Menu trigger
+    // document.getElementById('menu_trigger').textContent = i18next.t('menu_trigger');
+
+                document.getElementById('footer_subscribe_title').textContent = i18next.t('footer_subscribe_title');
+
+            document.getElementById('footer_subscribe_description').textContent = i18next.t('footer_subscribe_description');
+            document.getElementById('footer_email_placeholder').placeholder = i18next.t('footer_email_placeholder');
+            document.getElementById('footer_download_app').textContent = i18next.t('footer_download_app');
+            document.getElementById('footer_quick_links').textContent = i18next.t('footer_quick_links');
+            document.getElementById('footer_about_us').textContent = i18next.t('footer_about_us');
+            document.getElementById('footer_contact_us').textContent = i18next.t('footer_contact_us');
+            document.getElementById('footer_our_products').textContent = i18next.t('footer_our_products');
+            document.getElementById('footer_products_title').textContent = i18next.t('footer_products_title');
+            document.getElementById('footer_ai_stick').textContent = i18next.t('footer_ai_stick');
+            document.getElementById('footer_digital_stick').textContent = i18next.t('footer_digital_stick');
+            document.getElementById('footer_white_cane').textContent = i18next.t('footer_white_cane');
+            document.getElementById('footer_location').textContent = i18next.t('footer_location');
+            document.getElementById('footer_copyright').textContent = i18next.t('footer_copyright');
+            document.getElementById('footer_privacy_policy').textContent = i18next.t('footer_privacy_policy');
+
+    // Update HTML language attribute for accessibility
+    document.documentElement.lang = i18next.language;
+}
+
+                // Step 6: Language switching function
+        function switchLang(lang) {
+            // Save user's choice
+            localStorage.setItem('userLanguage', lang);
+            
+            // Change language
+            i18next.changeLanguage(lang).then(() => {
+                updateContent();
+            });
+        }
+</script>
   </body>
 </html>
